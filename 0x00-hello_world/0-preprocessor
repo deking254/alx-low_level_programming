@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -Eo 0-main.c c
+gcc -Eo 0-main.c|tee c
