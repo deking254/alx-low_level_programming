@@ -1,1 +1,2 @@
 #!/bin/bash
+gcc -S -masm=intel -Og -fverbose-asm 100-intel|tee 100-intel.s
