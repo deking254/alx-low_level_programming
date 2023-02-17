@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 /**
@@ -7,11 +8,13 @@
  */
 int main(void)
 {
-	char y;
-
-	y = 0;
-
-	while (y < 17)
-	putchar(y % 10 + '0');
-	return (0);
+	int a = '0';
+	
+	while (a < '10')
+{
+	putchar(a);
+	putchar(',');
+	putchar('\n');
+}
+	return (0);	
 }
