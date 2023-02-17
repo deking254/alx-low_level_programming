@@ -12,9 +12,9 @@ int main(void)
 
 	for (a = 0; a <= 8; a++)
 	{
+	putchar(a + '0');
 	for (c += 1 ; c <= 9 ; c++)
 	{
-	putchar(a + '0');
 	putchar(c + '0');
 	if (c < 9)
 	{
