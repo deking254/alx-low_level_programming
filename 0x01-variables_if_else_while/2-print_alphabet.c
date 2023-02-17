@@ -1,5 +1,10 @@
-#include <stdio>
-/*main is the program entry point*/
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	char f;
