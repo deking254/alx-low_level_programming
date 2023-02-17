@@ -11,7 +11,7 @@ int main(void)
 
 	y = 0;
 
-	char c:
+	char c;
 
 	if (y <= 9)
 	{
