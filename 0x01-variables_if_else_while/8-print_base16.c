@@ -12,6 +12,10 @@ int main(void)
 	y = 0;
 
 	while (y < 17)
+	{
 	putchar(y % 10 + '0');
+	++y;
+	}
+	putchar('\n');
 	return (0);
 }
