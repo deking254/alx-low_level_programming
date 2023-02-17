@@ -7,11 +7,9 @@
  */
 int main(void)
 {
-	char y;
+	char y, c;
 
 	y = 0;
-
-	char c;
 
 	if (y <= 9)
 	{
