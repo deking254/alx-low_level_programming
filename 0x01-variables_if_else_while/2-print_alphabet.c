@@ -11,4 +11,5 @@ int main(void)
 
 	for (f = 'a'; f <= 'z'; ++f)
 	putchar(f);
+	return (0);
 }
