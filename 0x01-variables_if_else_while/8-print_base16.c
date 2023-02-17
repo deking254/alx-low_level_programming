@@ -11,14 +11,16 @@ int main(void)
 
 	y = 0;
 
+	char c:
+
 	if (y <= 9)
 	{
 	putchar(y % 10 + '0');
 	y++;
 	}
-	for (char c = 'a' ; c <= 'f' ; ++c)
+	for (c = 'a' ; c <= 'f' ; ++c)
 	{
-	printchar(c);
+	putchar(c);
 	}
 	putchar('\n');
 	return (0);
