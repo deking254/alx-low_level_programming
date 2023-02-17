@@ -13,5 +13,5 @@ int main(void)
 	putchar(f);
 	for (f = 'A'; f <= 'Z'; ++f)
 	putchar(f);
-	result (0);
+	return (0);
 }
