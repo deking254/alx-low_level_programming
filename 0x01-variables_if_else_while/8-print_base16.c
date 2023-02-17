@@ -14,7 +14,7 @@ int main(void)
 	while (y < 17)
 	{
 	putchar(y % 10 + '0');
-	++y;
+	y++;
 	}
 	putchar('\n');
 	return (0);
