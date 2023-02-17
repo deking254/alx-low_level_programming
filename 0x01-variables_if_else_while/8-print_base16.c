@@ -11,14 +11,14 @@ int main(void)
 
 	y = 0;
 
-	for (y = 0; y <= 9; ++y) 
+	for (y = 0; y <= 9; ++y)
 	{
 	putchar(y % 10 + '0');
 	}
 	for (c = 'a' ; c <= 'f' ; ++c)
-        {
+	{
         putchar(c);
-        }
+	}
 	putchar('\n');
 	return (0);
 }
