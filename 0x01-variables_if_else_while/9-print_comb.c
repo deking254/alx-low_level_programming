@@ -8,9 +8,9 @@
  */
 int main(void)
 {
-	int a = '0';
+	int a = 0;
 	
-	while (a % 10 < '10')
+	while (a % 10 < 10)
 {
 	putchar(a);
 	putchar(',');
