@@ -16,9 +16,12 @@ int main(void)
 	putchar(y % 10 + '0');
 	y++;
 	}
+	if (y = 9)
+	{
 	for (c = 'a' ; c <= 'f' ; ++c)
 	{
 	putchar(c);
+	}
 	}
 	putchar('\n');
 	return (0);
