@@ -13,4 +13,5 @@ int main(void)
 
 	while (y < 17)
 	putchar(y + '0');
+	return (0);
 }
