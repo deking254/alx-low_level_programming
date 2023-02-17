@@ -12,7 +12,6 @@ int main(void)
 
 	for (a = 0; a <= 8; a++)
 	{
-	c = a + 1;
 	for (c += 1 ; c <= 9 ; c++)
 	{
 	putchar(a + '0');
