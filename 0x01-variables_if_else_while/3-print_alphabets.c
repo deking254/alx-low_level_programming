@@ -1,7 +1,17 @@
 #include <stdio.h>
-int main() {
-    char c;
-    for (c = 'A'; c <= 'Z'; ++c)
-        printf("%c ", c);
-    return 0;
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	char f;
+	
+	for (f = 'a'; f <= 'z'; ++f)
+	putchar(f);
+	for (f = 'A'; f <= 'Z'; ++f)
+	putchar(f);
+	result (0);
 }
