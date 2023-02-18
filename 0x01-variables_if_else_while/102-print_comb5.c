@@ -14,23 +14,33 @@ int main(void)
 	{
 	for (b = 0; b <= 8; b++)
 	{
+	for (d = 0; d <= 9; d++)
+	{
 	for (c = b + 1  ; c <= 99 ; c++)
 	{
-	d = c;
-	while (d >= 10)
-	{
-	d = c / 10;
-	}
 	putchar(a + '0');
 	putchar(b + '0');
-	if (b < 7)
+	do 
 	{
 	putchar(' ');
-	}
 	putchar(d + '0');
-	putchar(c % 10 + '0');
+	if (d > 0)
+	{
+	c = 0;
+	putchar(c + '0');
+	if (b < 8)
+	{
 	putchar(',');
 	putchar(' ');
+	}
+	}
+	else
+	{
+	c = 1;
+	putchar(c + '0');
+	}	
+	}while(c <= 9);
+	}
 	}
 	}
 	}
