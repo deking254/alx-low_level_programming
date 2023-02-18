@@ -22,11 +22,11 @@ int main(void)
 	putchar(b + '0');
 	if (b < 7)
 	{
-	putchar(',');
 	putchar(' ');
 	}
 	putchar(d + '0');
 	putchar(c + '0');
+	putchar(',');
 	}
 	}
 	}
