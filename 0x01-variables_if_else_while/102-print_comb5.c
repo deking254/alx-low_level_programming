@@ -16,32 +16,48 @@ int main(void)
 	{
 	for (d = 0; d <= 9; d++)
 	{
-	for (c = b + 1  ; c <= 99 ; c++)
-	{
 	putchar(a + '0');
 	putchar(b + '0');
-	do {
-	putchar(' ');
-	putchar(d + '0');
 	if (d > 0)
 	{
 	c = 0;
-	c++;
+	do {
+	putchar(' ');
+	putchar(d + '0');
 	putchar(c + '0');
+	c++;
 	if (b < 8)
 	{
 	putchar(',');
 	putchar(' ');
 	}
-	}
 	else
 	{
-	c = 1;
 	putchar(c + '0');
 	c++;
 	}	
 	} while (c <= 9);
 	}
+	if (d <= 0)
+        {
+        c = 1;
+        do {
+        putchar(' ');
+        putchar(d + '0');
+        putchar(c + '0');
+        c++;
+        if (b < 8)
+        {
+        putchar(',');
+        putchar(' ');
+        }
+        else
+        {
+        putchar(c + '0');
+        c++;
+        }
+        } while (c <= 9);
+        }
 	}
 	}
 	}
