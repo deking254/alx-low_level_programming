@@ -14,9 +14,9 @@ int main(void)
 	{
 	for (b = 0; b <= 8; b++)
 	{
-	for (c = 1  ; c <= 99 ; c++)
+	for (c = b + 1  ; c <= 99 ; c++)
 	{
-	while (c >= 10)
+	while (d >= 10)
 	{
 	d = c / 10;
 	}
