@@ -20,13 +20,13 @@ int main(void)
 	{
 	putchar(a + '0');
 	putchar(b + '0');
-	do 
-	{
+	do {
 	putchar(' ');
 	putchar(d + '0');
 	if (d > 0)
 	{
 	c = 0;
+	c++;
 	putchar(c + '0');
 	if (b < 8)
 	{
@@ -38,8 +38,9 @@ int main(void)
 	{
 	c = 1;
 	putchar(c + '0');
+	c++;
 	}	
-	}while(c <= 9);
+	} while (c <= 9);
 	}
 	}
 	}
