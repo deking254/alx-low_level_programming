@@ -8,7 +8,7 @@
 int main(void)
 {
 	int a;
-	int c, b;
+	int c, b, d;
 
 	for (a = 0; a <= 9; a++)
 	{
@@ -16,9 +16,10 @@ int main(void)
 	{
 	for (c = b + 1  ; c <= 99 ; c++)
 	{
-	while (c >= 10)
+	d = c;
+	while (d >= 10)
 	{
-	c = c / 10;
+	d = c / 10;
 	}
 	putchar(a + '0');
 	putchar(b + '0');
@@ -26,7 +27,7 @@ int main(void)
 	{
 	putchar(' ');
 	}
-	putchar(c + '0');
+	putchar(d + '0');
 	putchar(c % 10 + '0');
 	putchar(',');
 	putchar(' ');
