@@ -27,14 +27,14 @@ int main(void)
 	}
 	else
 	{
-	while(b >= 10)
+	while (b >= 10)
 	{
 	c = b / 10;
 	}
 	putchar(c + '0');
 	putchar(b % 10 + '0');
 	}
-	if (a < 98)
+	if (d < 8)
 	{
 	putchar(',');
 	}
