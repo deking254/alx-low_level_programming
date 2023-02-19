@@ -19,7 +19,7 @@ int main(void)
 	if (d < 10)
 	{
 	putchar('0');
-        putchar(d + '0');
+        putchar(b + '0');
 	} else if (d >= 10)
 	{
 	putchar((d / 10 % 10) + '0');
