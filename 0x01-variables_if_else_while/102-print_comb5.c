@@ -22,7 +22,7 @@ int main(void)
 	putchar((d / 10 % 10) + '0');
 	putchar((d % 10) + '0');
         putchar(',');
-	if (d < 8)
+	if (b < 8)
 	{
 	putchar(' ');
 	}
