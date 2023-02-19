@@ -20,9 +20,9 @@ int main(void)
 	{
 	putchar('0');
         putchar(d + '0');
-	} else if (d => 10)
+	} else if (d >= 10)
 	{
-	putchar((d / 10 % 10 + '0');
+	putchar((d / 10 % 10) + '0');
 	putchar((d % 10) + '0');
 	}
         putchar(' ');
