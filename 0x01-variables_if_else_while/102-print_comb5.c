@@ -27,7 +27,7 @@ int main(void)
 	}
 	else
 	{
-	putchar(c + '0');
+	putchar('0');
 	putchar(b % 10 + '0');
 	}
 	if (d < 8)
