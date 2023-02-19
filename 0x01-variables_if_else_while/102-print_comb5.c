@@ -16,6 +16,9 @@ int main(void)
 	{
 	for (d = 1; d <= 99; d++)
 	{
+	putchar(a + '0');
+	putchar(b + '0');
+	putchar(' ');
 	if (d < 10)
 	{
 	putchar('0');
@@ -25,12 +28,10 @@ int main(void)
 	putchar((d / 10 % 10) + '0');
 	putchar((d % 10) + '0');
 	}
-        putchar(' ');
-	putchar(a + '0');
-	putchar(b + '0');
+        putchar(',');
 	if (d < 8)
 	{
-	putchar(',');
+	putchar(' ');
 	}
         }
 	}
