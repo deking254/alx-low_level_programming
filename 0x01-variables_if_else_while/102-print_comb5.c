@@ -8,25 +8,23 @@
  */
 int main(void)
 {
-        int a, b, d;
+        int b, d;
 
-        for (a = 0; a <= 9; a++)
+        for (b = 0; b <=98; b++)
         {
-	for (b = 0; a <= 8; b++)
-	{
 	for (d = 1; d <= 99; d++)
 	{
-	putchar(a + '0');
-	putchar(b + '0');
+	putchar((b / 10 % 10) + '0');
+	putchar((b % 10) + '0');
 	putchar(' ');
 	putchar((d / 10 % 10) + '0');
 	putchar((d % 10) + '0');
-        putchar(',');
-	if (b < 8)
+	if (b == 98)
 	{
+	putchar(',');
 	putchar(' ');
 	}
-        }
+        
 	}
 	}
         return (0);
