@@ -21,7 +21,6 @@ int main(void)
 	putchar(' ');
 	if (d < 10)
 	{
-	putchar('0');
         putchar(b + '0');
 	} else if (d >= 10)
 	{
