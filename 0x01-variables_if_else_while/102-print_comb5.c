@@ -19,14 +19,8 @@ int main(void)
 	putchar(a + '0');
 	putchar(b + '0');
 	putchar(' ');
-	if (d < 10)
-	{
-        putchar(b + '0');
-	} else if (d >= 10)
-	{
 	putchar((d / 10 % 10) + '0');
 	putchar((d % 10) + '0');
-	}
         putchar(',');
 	if (d < 8)
 	{
