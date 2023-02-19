@@ -7,59 +7,38 @@
  */
 int main(void)
 {
-	int a;
-	int c, b, d;
+        int a;
+        int c, b, d;
 
-	for (a = 0; a <= 9; a++)
+        for (a = 0; a <= 9; a++)
+        {
+        for (b = 0; b <= 8; b++)
+        {
+	for (d = 0; d <=9; d++)
 	{
-	for (b = 0; b <= 8; b++)
-	{
-	for (d = 0; d <= 9; d++)
-	{
-	putchar(a + '0');
-	putchar(b + '0');
-	if (d > 0)
-	{
-	c = 0;
-	do {
+        for (c = 0  ; c <= 9 ; c++)
+        {
+        putchar(a + '0');
+        putchar(b + '0');
 	putchar(' ');
 	putchar(d + '0');
-	putchar(c + '0');
-	c++;
-	if (b < 8)
+	if (d <= 0 )
 	{
-	putchar(',');
-	putchar(' ');
+	c = c + 1;
+        putchar(c + '0');
 	}
 	else
 	{
-	putchar(c + '0');
-	c++;
-	}	
-	} while (c <= 9);
-	}
-	if (d <= 0)
-        {
-        c = 1;
-        do {
-        putchar(' ');
-        putchar(d + '0');
         putchar(c + '0');
-        c++;
-        if (b < 8)
+	}
+        if (b < 7)
         {
         putchar(',');
         putchar(' ');
         }
-        else
-        {
-        putchar(c + '0');
-        c++;
         }
-        } while (c <= 9);
+        }
         }
 	}
-	}
-	}
-	return (0);
+        return (0);
 }
