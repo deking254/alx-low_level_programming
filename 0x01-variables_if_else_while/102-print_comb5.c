@@ -16,7 +16,7 @@ int main(void)
         {
 	for (d = 0; d <=9; d++)
 	{
-        for (c = 0  ; c <= 9 ; c++)
+        for (c = 0  ; c <= 9 ;)
         {
         putchar(a + '0');
         putchar(b + '0');
@@ -30,6 +30,7 @@ int main(void)
 	else
 	{
         putchar(c + '0');
+	c++
 	}
         if (b < 7)
         {
