@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 
 /**
@@ -8,38 +9,38 @@
 int main(void)
 {
         int a;
-        int c, b, d;
+        int b, c;
 
         for (a = 0; a <= 9; a++)
         {
-        for (b = 0; b <= 8; b++)
-        {
-	for (d = 0; d <=9; d++)
+	for (d = 0; a <= 8; d++)
 	{
-        for (c = 0  ; c <= 9 ;)
-        {
-        putchar(a + '0');
-        putchar(b + '0');
-	putchar(' ');
+	putchar(a + '0');
 	putchar(d + '0');
-	if (d <= 0 )
+	putchar(' ');
+        for (b = 1; b <= 99; b++)
+        {
+	if (b < 10)
 	{
-	c = c + 1;
-        putchar(c + '0');
+	putchar('0');
+	putchar(b +'0');
 	}
 	else
 	{
-        putchar(c + '0');
-	c++;
+	while(b >= 10)
+	{
+	c = b / 10;
 	}
-        if (b < 7)
-        {
-        putchar(',');
-        putchar(' ');
+	putchar(c + '0');
+	putchar(b % 10 + '0');
+	}
+	if (a < 98)
+	{
+	putchar(',');
+	}
         }
-        }
-        }
-        }
+	}
 	}
         return (0);
 }
+
