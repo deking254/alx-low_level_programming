@@ -30,7 +30,7 @@ int main(void)
 	else
 	{
         putchar(c + '0');
-	c++
+	c++;
 	}
         if (b < 7)
         {
