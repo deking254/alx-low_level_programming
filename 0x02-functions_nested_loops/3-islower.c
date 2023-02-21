@@ -9,8 +9,8 @@ int _islower(int c)
 {
 	int asci;
 
-	int asci = (int) c;
-	if (acsci >= 97 && asci <=122)
+	asci = (int) c;
+	if (asci >= 97 && asci <=122)
 	{
 	return 1;
 	}else

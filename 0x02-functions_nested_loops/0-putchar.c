@@ -13,6 +13,7 @@ int main(void)
 	while (i < 10)
 	{
 	_putchar(putcha[i]);
+	i++;
 	}
 	_putchar('\n');
 	

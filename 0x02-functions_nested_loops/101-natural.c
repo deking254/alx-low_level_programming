@@ -19,7 +19,7 @@ int main(void)
 	}
 	while (sum > 0)
 	{
-	print(sum % 10);
+	_putchar(sum % 10);
 	sum = sum / 10;
 	}
 	}	

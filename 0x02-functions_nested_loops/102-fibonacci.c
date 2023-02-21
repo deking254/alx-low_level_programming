@@ -15,7 +15,7 @@ int main(void)
 	{
 	_putchar(i + '0');
 	_putchar(',');
-	_putchar(',');
+	_putchar(' ');
 	_putchar(j + '0');
 	_putchar(',');
 	_putchar(' ');
