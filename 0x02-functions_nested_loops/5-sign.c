@@ -2,7 +2,7 @@
 
 /**
  * print_sign - check the code.
- *
+ * @n: integer operand
  * Return: Always int.
  */
 int print_sign(int n)

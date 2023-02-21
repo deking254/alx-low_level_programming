@@ -2,7 +2,7 @@
 
 /**
  * print_last_digit - check the code
- *
+ * @a: integer operand.
  * Return: Always int.
  */
 int print_last_digit(int a)

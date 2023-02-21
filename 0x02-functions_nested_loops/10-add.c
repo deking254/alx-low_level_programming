@@ -4,8 +4,8 @@
  * add - check the code
  *
  * Return: Always int.
- * a - first number.
- * b - second number.
+ * @a: first number.
+ * @b: second number.
  */
 int add(int a, int b)
 {

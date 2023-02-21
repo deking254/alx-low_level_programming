@@ -2,7 +2,7 @@
 
 /**
  * print_to_98 - check the code
- *
+ * @n: integer
  * Return: Always void.
  */
 void print_to_98(int n)
@@ -24,7 +24,8 @@ void print_to_98(int n)
 	_putchar(n + '0');
 	i++;
 	}
-	}else if (n == 98)
+	}
+	else if (n == 98)
 	{
 	_putchar(n + '0');
 	}

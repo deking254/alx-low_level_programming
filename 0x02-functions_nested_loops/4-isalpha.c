@@ -2,11 +2,11 @@
 
 /**
  * _isalpha - check the code.
- *
+ * @c: number operand
  * Return: Always int.
  */
 int _isalpha(int c)
-{       
+{
 	int asci;
 
 	asci = (int) c;

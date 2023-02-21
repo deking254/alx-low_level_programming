@@ -5,7 +5,7 @@
  *
  * Return: Always int.
  *
- * c - parameter passes to function.
+ * @c:  parameter passes to function.
  */
 int _islower(int c)
 {
