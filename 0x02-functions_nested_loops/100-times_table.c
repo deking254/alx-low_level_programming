@@ -24,7 +24,8 @@ void print_times_table(int n)
         _putchar(f + '0');
         _putchar(l + '0');
 	j++;
-        }else
+        }
+	else
         {
         _putchar(val + '0');
 	j++;
@@ -32,7 +33,7 @@ void print_times_table(int n)
         if (j < n)
         {
         _putchar(',');
-        _putchar(' ')
+        _putchar(' ');
         }
         }
 	i++;

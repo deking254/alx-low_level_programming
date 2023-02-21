@@ -13,7 +13,8 @@ int _islower(int c)
 	if (asci >= 97 && asci <= 122)
 	{
 	return (1);
-	} else
+	}
+	else
 	{
 	return (0);
 	}

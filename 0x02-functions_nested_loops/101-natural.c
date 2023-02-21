@@ -22,8 +22,7 @@ int main(void)
 	_putchar(sum % 10);
 	sum = sum / 10;
 	}
-	}	
-  
-    return (0);
+	}
+	return (0);
 }
 

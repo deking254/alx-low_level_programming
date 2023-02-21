@@ -13,10 +13,12 @@ int _isalpha(int c)
 	if (asci >= 97 && asci <= 122)
 	{
 	return (1);
-	}else if (asci >= 65 && asci <= 90)
+	}
+	else if (asci >= 65 && asci <= 90)
 	{
 	return (1);
-	}else
+	}
+	else
 	{
 	return (0);
 	}

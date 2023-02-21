@@ -5,7 +5,6 @@
  *
  * Return: Always void.
  */
-}
 void times_table(void)
 {
 	int i = 0;
@@ -23,7 +22,8 @@ void times_table(void)
 	_putchar(f + '0');
 	_putchar(l + '0');
 	j++;
-	}else
+	}
+	else
 	{
 	_putchar(val + '0');
 	j++;
@@ -31,7 +31,7 @@ void times_table(void)
 	if (j < 10)
 	{
 	_putchar(',');
-	_putchar(' ')
+	_putchar(' ');
 	}
 	}
 	i++;

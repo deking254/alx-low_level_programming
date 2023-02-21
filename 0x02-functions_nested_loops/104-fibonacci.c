@@ -23,5 +23,5 @@ int main(void)
         i = j;
         m++;
         }
-    return (0);
+	return (0);
 }

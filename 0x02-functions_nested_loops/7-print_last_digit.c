@@ -10,5 +10,5 @@ int print_last_digit(int a)
 	int lastlast;
 
 	lastlast = a % 10;
-	return lastlast;
+	return (lastlast);
 }

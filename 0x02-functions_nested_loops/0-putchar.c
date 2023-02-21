@@ -10,7 +10,7 @@ int main(void)
 	int i = 0;
 	char putcha[] = {'_' , 'p' , 'u' , 't' , 'c' , 'h' , 'a' , 'r'};
 	
-	while (i < 10)
+	while (i <= 7)
 	{
 	_putchar(putcha[i]);
 	i++;
