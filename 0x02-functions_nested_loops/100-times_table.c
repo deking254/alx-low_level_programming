@@ -13,31 +13,31 @@ void print_times_table(int n)
 	if (n <= 15 && n >= 0)
 	{
 	while (i <= n)
-        {
-        while (j <= n)
-        {
-        int val = i * j;
-        if (val >=10)
-        {
-        int f = (_putchar(val / 10 % 10));
-        int l = (_putchar(val % 10));
-        _putchar(f + '0');
-        _putchar(l + '0');
+	{
+	while (j <= n)
+	{
+	int val = i * j;
+	if (val >=10)
+	{
+	int f = (_putchar(val / 10 % 10));
+	int l = (_putchar(val % 10));
+	_putchar(f + '0');
+	_putchar(l + '0');
 	j++;
-        }
+	}
 	else
-        {
-        _putchar(val + '0');
+	{
+	_putchar(val + '0');
 	j++;
-        }
-        if (j < n)
-        {
-        _putchar(',');
-        _putchar(' ');
-        }
-        }
+	}
+	if (j < n)
+	{
+	_putchar(',');
+	_putchar(' ');
+	}
+	}
 	i++;
-        _putchar('\n');
-        }	
+	_putchar('\n');
+	}	
 	}
 }

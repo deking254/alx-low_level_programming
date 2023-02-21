@@ -4,6 +4,8 @@
  * _islower - check the code.
  *
  * Return: Always int.
+ *
+ * c - parameter passes to function.
  */
 int _islower(int c)
 {

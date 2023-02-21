@@ -16,15 +16,16 @@ void print_to_98(int n)
 	_putchar(n + '0');
 	i++;
 	}
-	}else if (n > 98)
-        {
-        while (i < ((n - 98)))
-        {
-        _putchar(n + '0');
+	}
+	else if (n > 98)
+	{
+	while (i < ((n - 98)))
+	{
+	_putchar(n + '0');
 	i++;
-        }
-        }else if (n == 98)
-        {
-        _putchar(n + '0');
-        }
+	}
+	}else if (n == 98)
+	{
+	_putchar(n + '0');
+	}
 }

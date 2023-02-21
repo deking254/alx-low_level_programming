@@ -7,21 +7,21 @@
  */
 int main(void)
 {
-        int i = 1;
-        int j = 2;
-        int m = 0;
+	int i = 1;
+	int j = 2;
+	int m = 0;
 
-        while (m <= 49)
-        {
-        _putchar(i + '0');
-        _putchar(',');
-        _putchar(' ');
-        _putchar(j + '0');
-        _putchar(',');
-        _putchar(' ');
-        j += i;
-        i = j;
-        m++;
-        }
+	while (m <= 49)
+	{
+	_putchar(i + '0');
+	_putchar(',');
+	_putchar(' ');
+	_putchar(j + '0');
+	_putchar(',');
+	_putchar(' ');
+	i = j;
+	j += i;
+	m++;
+	}
 	return (0);
 }
