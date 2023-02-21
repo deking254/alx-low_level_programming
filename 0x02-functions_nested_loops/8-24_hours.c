@@ -11,7 +11,7 @@ void jack_bauer(void)
 	int j = 0;
 
 	while (i <= 23)
-	}
+	{
 	while (j <= 59)
 	{
 	_putchar(j / 10 % 10);

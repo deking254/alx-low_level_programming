@@ -11,7 +11,7 @@ void print_to_98(int n)
 
 	if (n < 98)
 	{
-	while (i < ((98 - n) + 1))
+	while (i < ((98 - n)))
 	{
 	_putchar(n + '0');
 	_putchar((n++) + '0');
@@ -19,7 +19,7 @@ void print_to_98(int n)
 	}
 	}else if (n > 98)
         {
-        while (i < ((n - 98) + 1))
+        while (i < ((n - 98)))
         {
         _putchar(n + '0');
         _putchar((n--) + '0');

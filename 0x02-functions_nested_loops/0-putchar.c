@@ -8,7 +8,7 @@
 int main(void)
 {
 	int i = 0;
-	char putcha[] = {'_' , 'p' , 'u' , 't' , 'c' , 'h' , 'a' , 'r', '\0'};
+	char putcha[] = {'_' , 'p' , 'u' , 't' , 'c' , 'h' , 'a' , 'r'};
 	
 	while (i < 10)
 	{
