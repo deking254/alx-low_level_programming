@@ -1,14 +1,10 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * _abs - check the code
  *
- * Return: Always 0.
- */
-int main(void)
-{
-    return (0);
-}
+ * Return: Always int.
+*/
 int _abs(int a)
 {
 	a *= -1;

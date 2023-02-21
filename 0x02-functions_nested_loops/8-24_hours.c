@@ -1,15 +1,10 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * jack_bauer - check the code
  *
- * Return: Always 0.
+ * Return: Always void.
  */
-int main(void)
-{
-    jack_bauer();
-    return (0);
-}
 void jack_bauer(void)
 {
 	int i, j = 0;
