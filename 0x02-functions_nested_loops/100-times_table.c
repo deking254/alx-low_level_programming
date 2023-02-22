@@ -18,7 +18,7 @@ void print_times_table(int n)
 	while (j <= n)
 	{
 	val = i * j;
-	if (val >=10)
+	if (val >= 10)
 	{
 	f = (_putchar(val / 10 % 10));
 	l = (_putchar(val % 10));
