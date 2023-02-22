@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * main - check the code.
@@ -19,8 +20,7 @@ int main(void)
 	}
 	while (sum > 0)
 	{
-	_putchar(sum % 10 + '0');
-	sum = sum / 10;
+	printf("%d", sum);
 	}
 	}
 	return (0);
