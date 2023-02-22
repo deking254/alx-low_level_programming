@@ -21,10 +21,10 @@ int main(void)
 	{
 	k += j;
 	j = k - j;
-	printf(", %d", k);
+	printf(", %ld", k);
 	}
 	++i;
 	}
-	printf("%d, ", j);
+	printf("%ld, ", j);
 	return (0);
 }
