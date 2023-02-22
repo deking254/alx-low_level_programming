@@ -10,17 +10,14 @@ int main(void)
 	int i = 1;
 	int j = 2;
 	int m = 0;
+	int number;
 
-	while (m <= 25)
+	while (m <= 50)
 	{
-	_putchar(i + '0');
-	_putchar(',');
-	_putchar(' ');
-	_putchar(j + '0');
-	_putchar(',');
-	_putchar(' ');
-	j += i;
+	printf("%d, ",i);
+	printf("%d, ",j);
 	i = j;
+	j += i;
 	m++;
 	}
 	return (0);
