@@ -17,11 +17,11 @@ int main(void)
 	sum += i;
 	i++;
 	}
+	}
 	while (sum > 0)
 	{
 	_putchar(sum % 10);
 	sum = sum / 10;
-	}
 	}
 	return (0);
 }
