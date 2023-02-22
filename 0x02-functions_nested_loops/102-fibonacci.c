@@ -13,8 +13,8 @@ int main(void)
 
 	while (m <= 50)
 	{
-	printf("%d, ",i);
-	printf("%d, ",j);
+	printf("%d, ", i);
+	printf("%d, ", j);
 	i = j;
 	j += i;
 	m++;

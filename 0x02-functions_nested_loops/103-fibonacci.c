@@ -9,19 +9,19 @@
 int main(void)
 {
 	int i = 0;
-	int sum = 0;
+	long j = 1;
+	long k = 2;
+	long sum = k;
 
-	while (i < 4000000)
+	while (k + j < 4000000)
 	{
-	if ((i % 2) == 0)
-	{
-	sum += i;
-	i++;
+	k += j;
+	if ((k % 2) == 0)
+	sum += k;
+	j = k - j;
+	++i;
 	}
-	while (sum > 0)
-	{
-	printf("%d", sum);
-	}
+	printf("%ld\n", sum);
 	}
 	return (0);
 }

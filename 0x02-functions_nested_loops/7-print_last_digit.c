@@ -7,12 +7,13 @@
  */
 int print_last_digit(int a)
 {
-	int lastlast = a % 10;
+	int lastlast;
 
+	lastlast = a % 10;
 	if (lastlast  < 0)
 	{
-	a *= -1;
-	}	
+	lastlast *= -1;
+	}
 	_putchar(lastlast + '0');
 	return (lastlast);
 }
