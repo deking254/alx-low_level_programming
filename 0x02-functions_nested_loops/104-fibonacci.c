@@ -15,6 +15,11 @@ int main(void)
 
 	for (count = 0; count < 92; count++)
 	{
+	s = f1 + f2;
+	printf("%lu, ", s);
+	f1 = f2;
+	f2 = s;
+	}
 	f1h1 = f1 / 10000000000;
 	f2h1 = f2 / 10000000000;
 	f1h2 = f1 % 10000000000;
