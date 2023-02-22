@@ -27,7 +27,7 @@ int main(void)
 	for (count = 93; count < 99; count++)
 	{
 	h1 = f1h1 + f2h1;
-	h1 = f1h2 + f2h2;
+	h2 = f1h2 + f2h2;
 	if (f1h2 + f2h2 > 9999999999)
 	{
 	h1 += 1;
