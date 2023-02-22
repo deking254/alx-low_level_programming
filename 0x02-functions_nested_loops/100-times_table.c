@@ -2,13 +2,14 @@
 
 /**
  * print_times_table - check the code.
- *
+ * @n: integer
  * Return: Always void.
  */
 void print_times_table(int n)
 {
 	int i = 0;
 	int j = 0;
+	int val, f, l;
 
 	if (n <= 15 && n >= 0)
 	{
@@ -16,11 +17,11 @@ void print_times_table(int n)
 	{
 	while (j <= n)
 	{
-	int val = i * j;
+	val = i * j;
 	if (val >=10)
 	{
-	int f = (_putchar(val / 10 % 10));
-	int l = (_putchar(val % 10));
+	f = (_putchar(val / 10 % 10));
+	l = (_putchar(val % 10));
 	_putchar(f + '0');
 	_putchar(l + '0');
 	j++;
