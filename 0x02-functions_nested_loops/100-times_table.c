@@ -20,8 +20,8 @@ void print_times_table(int n)
 	val = i * j;
 	if (val >= 10)
 	{
-	f = (_putchar(val / 10 % 10));
-	l = (_putchar(val % 10));
+	f = val / 10 % 10;
+	l = (val % 10);
 	_putchar(f + '0');
 	_putchar(l + '0');
 	j++;
