@@ -10,7 +10,6 @@ int main(void)
 	int i = 1;
 	int j = 2;
 	int m = 0;
-	int number;
 
 	while (m <= 50)
 	{
