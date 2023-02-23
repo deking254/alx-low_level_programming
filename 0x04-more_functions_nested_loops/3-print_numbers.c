@@ -1,6 +1,7 @@
 #include "main.h"
 
 /**
+ * print_numbers - code
  * mul - check the code
  * Return: Always void.
  */
