@@ -16,7 +16,7 @@ if ((j / 2) != 0)
 {
 j = (j - 1) / 2;
 }
-for(i = j + 1; i <= k; i++)
+for (i = j + 1; i <= k; i++)
 _putchar(str[i]);
 _putchar('\n');
 
