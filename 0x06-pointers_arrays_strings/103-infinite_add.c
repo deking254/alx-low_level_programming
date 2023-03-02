@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- * add_string - check the code
+ * add_strings - check the code
  * @n1: integer
  * @r: integer
  * @siz_r: integer
+ * @n2: integer
  * Return: Always void.
  */
 char *add_strings(char *n1, char *n2, char *r, int siz_r)
@@ -43,6 +44,7 @@ return (r + siz_r + 1);
  * @n1: integer
  * @r: integer
  * @size_r: integer
+ * @n2: integer
  * Return: Always void.
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
