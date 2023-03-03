@@ -16,7 +16,7 @@ printf("%08x: ", byt);
 for (i = 0; i < 10; i++)
 {
 if ((i + byt) >= size)
-printf(" ");
+printf("  ");
 else
 printf("%02x", *(b + i + byt));
 if ((i % 2) != 0 && i != 0)
@@ -25,9 +25,11 @@ printf(" ");
 for (i = 0; i < 10; i++)
 {
 if ((i + byt) >= size)
+{
 break;
+}
 else if ((*b + i + byt) >= 31 &&
- *(b + i + byt) <= 126)
+*(b + i + byt) <= 126)
 {
 printf("%c", *(b + i + byt));
 }
