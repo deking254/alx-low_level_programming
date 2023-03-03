@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
  * print_buffer - check the code
- * @byt: integer.
  * @size: integer.
+ * @b: character.
  * Return: Always 0.
  */
 void print_buffer(char *b, int size)
@@ -16,15 +16,16 @@ for (i = 0; i < 10; i++)
 if ((i + byt) >= size)
 printf(" ");
 else
-printf("%02x", *(b + i +byt));
+printf("%02x", *(b + i + byt));
 if ((i % 2) != 0 && i != 0)
 printf(" ");
 }
-for ( i = 0; i < 10; i++)
+for (i = 0; i < 10; i++)
 {
 if ((i + byt) >= size)
 break;
-else if ((*b + i + byt) >= 31 && *(b + i + byt) <= 126)
+else if ((*b + i + byt) >= 31 &&
+*(b + i + byt) <= 126)
 printf("%c", *(b + i + byt));
 else
 printf(".");
