@@ -1,4 +1,6 @@
+#include "main.h"
 #include <stdio.h>
+
 /**
  * print_buffer - check the code
  * @size: integer.
