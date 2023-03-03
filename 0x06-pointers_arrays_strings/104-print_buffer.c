@@ -27,10 +27,12 @@ for (i = 0; i < 10; i++)
 if ((i + byt) >= size)
 break;
 else if ((*b + i + byt) >= 31 &&
-*(b + i + byt) <= 126)
+ *(b + i + byt) <= 126)
 printf("%c", *(b + i + byt));
 else
+{
 printf(".");
+}
 }
 if (byt >= size)
 continue;
