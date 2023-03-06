@@ -10,20 +10,23 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-unsigned int sum = 0;
+unsigned int val = 0;
 int i;
-int k;
-int len = 0;
 
-while (s[len] != 32)
-len++;
-for (i = 0; s[i] != 32; i++)
+while (*s)
 {
-for (k = 0; k < len ; k++)
+for (i = 0; accept[i]; i++)
 {
-if (accept[i] == s[k])
-sum += 1;
+if (*s == accept[i])
+{
+val++;
+break;
 }
+else if (accept[i + 1] == '\0')
+return (val);
 }
-return (sum);
+s++;
+}
+
+return (val);
 }
