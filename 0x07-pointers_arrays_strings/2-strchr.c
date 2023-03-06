@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _strchr - prints buffer in hexa
@@ -20,7 +21,7 @@ i++;
 for (j = 0; j < i; j++)
 {
 if (s[j] == c)
-break;
-}
 return (s + j);
+}
+return (NULL);
 }
