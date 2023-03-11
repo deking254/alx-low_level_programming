@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 
-void changehandler(int c, int f);
+
 /**
  * main - check the code
  * @argc: character
