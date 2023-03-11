@@ -84,4 +84,6 @@ changehandler(cents % 2, change);
 }
 if (cents >= 1 && cents < 2)
 printf("%d\n", change += cents);
+if (cents == 0)
+printf("%d\n", 0);
 }
