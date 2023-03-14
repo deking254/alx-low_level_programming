@@ -16,6 +16,8 @@ return (NULL);
 else
 {
 arr_ptr = malloc(size);
+if (arr_ptr == NULL)
+return (NULL);
 for (i = 0; i < size; i++)
 arr_ptr[i] = c;
 }
