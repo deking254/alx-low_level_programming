@@ -11,16 +11,16 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-unsigned int i = 0, j = 0, k = 0, l =0;
+unsigned int i = 0, j = 0, k = 0, l = 0;
 char *a;
 
 if (s1 == NULL)
 s1 = "";
 if (s2 == NULL)
 s2 = "";
-while(s1[i])
+while (s1[i])
 i++;
-while(s2[k])
+while (s2[k])
 k++;
 if (n >= k)
 l = i + k;
