@@ -17,7 +17,7 @@ int j;
 if (min > max)
 return (NULL);
 j = max - min;
-a = malloc (sizeof(int) * ((max - min) + 1));
+a = malloc(sizeof(int) * ((max - min) + 1));
 if (a == NULL)
 return (NULL);
 for (i = 0; i <= j; i++)
