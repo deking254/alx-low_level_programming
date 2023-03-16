@@ -19,7 +19,6 @@ s1[0] = ' ';
 if (s2 == NULL)
 s2[0] = ' ';
 t = malloc(strlen(s1) + strlen(s2));
-t[0] = 'c';
 if (t == NULL)
 {
 return (NULL);
