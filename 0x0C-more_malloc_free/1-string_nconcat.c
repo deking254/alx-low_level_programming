@@ -15,9 +15,9 @@ char *t;
 unsigned int i, j = 0;
 
 if (s1 == NULL)
-s1[0] = ' ';
+s1 = "";
 if (s2 == NULL)
-s2[0] = ' ';
+s2 = "";
 t = malloc(strlen(s1) + strlen(s2));
 if (t == NULL)
 {
