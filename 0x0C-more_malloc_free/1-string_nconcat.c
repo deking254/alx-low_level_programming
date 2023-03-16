@@ -34,13 +34,14 @@ k = 0;
 while (j < l)
 {
 if (j <= i)
-a[j] = s1[k];
+a[j] = s1[j];
 if (j >= i)
 {
 a[j] = s2[k];
 k++;
 }
-a[j] = '\0';
+j++;
 }
+a[j] = '\0';
 return (a);
 }
