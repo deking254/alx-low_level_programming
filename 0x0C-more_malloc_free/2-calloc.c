@@ -10,13 +10,19 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-int *a;
+char *a;
+unsigned int i = 0, l = 0;
 
 if (nmemb == 0 || size == 0)
 return (NULL);
-a = malloc(nmemb * size);
+l = nmemb * size;
+a = malloc(l);
 if (a == NULL)
 return (NULL);
-a[0] = 0;
+while (i < l)
+{
+a[i] = 0;
+i++;
+}
 return (a);
 }
