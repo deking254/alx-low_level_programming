@@ -16,10 +16,9 @@ int l = 0;
 l = new_size;
 if (new_size > old_size && ptr != NULL)
 {
+free(ptr);
 ptr = malloc(l);
 }
-if (ptr == NULL)
-return (NULL);
 if (new_size == old_size)
 return (ptr);
 if (ptr != NULL && new_size == 0)
