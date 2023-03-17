@@ -11,32 +11,35 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-int i = 0, l = 0;
-char*ptrr;
+char *a;
 
-ptrr = NULL;
-ptrr = realloc(ptrr, 30);
-if (ptrr == NULL)
-printf("it is null");
-else
-printf("it not null");
-l = new_size;
-i = new_size;
+a = ptr;
 if (new_size > old_size)
 {
-free(ptr);
-ptr = malloc(l);
+free(a);
+a = (char *)malloc(new_size);
+a[0] = 0;
 }
-if (ptr == NULL)
+if (new_size < old_size)
 {
-free(ptr);
-ptr = malloc(i);
+free(a);
+a = malloc(new_size + old_size);
+a[0] = 0;
 }
 if (new_size == old_size)
-return (ptr);
-if (ptr != NULL && new_size == 0)
+{
+free(a);
+a  = malloc(old_size + new_size);
+a[0] = 0;
+}
+if (a == NULL)
+{
+a = malloc(new_size);
+a[0] = 0;
+}
+if (a != NULL && new_size == 0)
 {
 return (NULL);
 }
-return (ptr);
+return (a);
 }
