@@ -28,9 +28,7 @@ a[0] = 0;
 }
 if (new_size == old_size)
 {
-free(a);
-a  = malloc(old_size + new_size);
-a[0] = 0;
+return (a);
 }
 if (a == NULL)
 {
