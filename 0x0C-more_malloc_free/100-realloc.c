@@ -18,7 +18,6 @@ if (new_size > old_size)
 {
 free(a);
 a = (char *)malloc(new_size);
-a[0] = 0;
 }
 if (new_size < old_size)
 {
