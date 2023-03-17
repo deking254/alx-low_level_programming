@@ -21,14 +21,17 @@ printf("it is null");
 else
 printf("it not null");
 l = new_size;
-i = old_size + new_size;
+i = new_size;
 if (new_size > old_size)
 {
 free(ptr);
 ptr = malloc(l);
 }
 if (ptr == NULL)
+{
+free(ptr);
 ptr = malloc(i);
+}
 if (new_size == old_size)
 return (ptr);
 if (ptr != NULL && new_size == 0)
