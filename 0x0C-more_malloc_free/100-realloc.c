@@ -21,7 +21,7 @@ a = (char *)malloc(new_size);
 if (new_size < old_size)
 {
 free(a);
-a = malloc(new_size + old_size);
+a = malloc(new_size);
 a[0] = 0;
 }
 if (new_size == old_size)
