@@ -13,7 +13,7 @@ if (d->name != NULL)
 printf("%s\n", d->name);
 else
 printf("Name: (nil)");
-if (sizeof(d->age) != 4)
+if (sizeof(d->age) == 4)
 printf("%f\n", d->age);
 else
 printf("Age: (nil)");
