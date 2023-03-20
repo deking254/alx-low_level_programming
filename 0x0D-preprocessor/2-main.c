@@ -1,8 +1,6 @@
 #include <stdio.h>
 /**
  * main - check the code
- * @argc: integer operand.
- * @argv: integer operand.
  * Return: Always int.
  */
 int main(void)
