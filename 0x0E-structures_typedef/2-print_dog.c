@@ -13,8 +13,8 @@ if (d->name != NULL)
 printf("%s\n", d->name);
 else
 printf("Name: (nil)");
-if (d->age != 0)
-printf("%.1f\n", d->age);
+if (sizeof(d->age) != 4)
+printf("%f\n", d->age);
 else
 printf("Age: (nil)");
 if (d->owner != NULL)
