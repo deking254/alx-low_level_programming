@@ -1,8 +1,3 @@
-#ifndef dog
-#define dog
-#define name
-#define age
-#define owner
 /**
  * struct dog - Short description
  * @name: tyr
@@ -16,4 +11,3 @@ char *name;
 float age;
 char *owner;
 };
-#endif
