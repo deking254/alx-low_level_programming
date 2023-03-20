@@ -1,3 +1,4 @@
+#define dog name age owner
 /**
  * struct dog - Short description
  * @name: tyr
