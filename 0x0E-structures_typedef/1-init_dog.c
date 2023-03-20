@@ -1,11 +1,5 @@
 #include <stdio.h>
 
-struct dog
-{
-char *name;
-float age;
-char *owner;
-};
 /**
  * init_dog - check the code
  * @d: integer operand.
