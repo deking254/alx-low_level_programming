@@ -1,11 +1,11 @@
 #include <stdio.h>
 
-typedef struct dog
+struct dog
 {
 char *name;
 float age;
 char *owner;
-} dog;
+};
 /**
  * init_dog - check the code
  * @d: integer operand.
