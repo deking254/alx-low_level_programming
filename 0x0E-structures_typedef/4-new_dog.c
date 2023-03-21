@@ -14,13 +14,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 dog_t *p;
 char *namecopy;
 char *ownercopy;
-namecopy = malloc(sizeof(char) * strlen(name));
+namecopy = malloc(30);
 ownercopy = malloc(sizeof(char) * strlen(owner));
+if (name == NULL || owner == NULL || !(age))
+return (NULL);
 if (namecopy != NULL)
 strcpy(namecopy, name);
 if (ownercopy != NULL)
 strcpy(ownercopy, owner);
-
 p = malloc(sizeof(char) * strlen(name) + sizeof(age) +
 sizeof(char) * strlen(owner));
 if (p != NULL)
