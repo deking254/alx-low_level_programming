@@ -4,35 +4,6 @@
 #include "dog.h"
 int _strlen(char *src);
 char *_strcpy(char *dest, char *src);
-
-/**
- * _strlen - check the codeerand.
- * @src: integer operand.
- * Return: Always int.
- */
-int _strlen(char *src)
-{
-int len = 0;
-while (src[len] != '\0')
-{
-len++;
-}
-return (len++);
-}
-/**
- * _strcpy - check the code
- * @dest: integer operand.
- * @src: integer operand.
- * Return: Always int.
- */
-char *_strcpy(char *dest, char *src)
-{
-int i;
-for (i = 0; src[i] != '\0'; i++)
-dest[i] = src[i];
-dest[i++] = '\0';
-return (dest);
-}
 /**
  * new_dog - check the code
  * @name: integer operand.
@@ -69,4 +40,34 @@ p->owner = _strcpy(p->owner, owner);
 p->age = age;
 }
 return (p);
+}
+
+/**
+ * _strlen - check the codeerand.
+ * @src: integer operand.
+ * Return: Always int.
+ */
+int _strlen(char *src)
+{
+int len = 0;
+while (src[len] != '\0')
+{
+len++;
+}
+len++;
+return (len);
+}
+/**
+ * _strcpy - check the code
+ * @dest: integer operand.
+ * @src: integer operand.
+ * Return: Always int.
+ */
+char *_strcpy(char *dest, char *src)
+{
+int i;
+for (i = 0; src[i] != '\0'; i++)
+dest[i] = src[i];
+dest[i++] = '\0';
+return (dest);
 }
