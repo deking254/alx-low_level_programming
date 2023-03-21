@@ -41,6 +41,7 @@ p->age = age;
 p->owner = owner;
 }
 else
+free(p);
 return (NULL);
 return (p);
 }
