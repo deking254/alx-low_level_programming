@@ -16,8 +16,11 @@ char *namecopy;
 char *ownercopy;
 namecopy = malloc(sizeof(char) * strlen(name));
 ownercopy = malloc(sizeof(char) * strlen(owner));
+if (namecopy != NULL)
 strcpy(namecopy, name);
+if (ownercopy != NULL)
 strcpy(ownercopy, owner);
+
 p = malloc(sizeof(char) * strlen(name) + sizeof(age) +
 sizeof(char) * strlen(owner));
 if (p != NULL)
