@@ -40,36 +40,30 @@ return (dest);
 dog_t *new_dog(char *name, float age, char *owner)
 {
 dog_t *p;
-int len = 0, leng = 0;
-char *namecopy;
-char *ownercopy;
-if (name != NULL)
+int name_l = 0, own_l = 0;
+if (name != NULL && owner != NULL)
 {
-namecopy = malloc(_strlen(name));
-if (namecopy != NULL)
-_strcpy(namecopy, name);
-}
-else
+name_l = _strlen(name);
+own_l = _strlen(owner);
+p = malloc(sizeof(dog_t));
+if (p == NULL)
+return (NULL);
+p->name = malloc(sizeof(char) * name_l);
+if (p->name == NULL)
 {
+free(p);
 return (NULL);
 }
-if (owner != NULL)
+p->owner = malloc(sizeof(char) * own_l);
+if (p->owner == NULL)
 {
-ownercopy = malloc(sizeof(char) * (_strlen(owner)));
-if (ownercopy != NULL)
-_strcpy(ownercopy, owner);
-}
-else
+free(p->name);
+free(p);
 return (NULL);
-p = malloc(sizeof(char) * (len++) + sizeof(age) +
-sizeof(char) * (leng++));
-if (p != NULL)
-{
-p->name = name;
+}
+p->name = _strcpy(p->name, name);
+p->owner = _strcpy(p->owner, owner);
 p->age = age;
-p->owner = owner;
 }
-else
-return (NULL);
 return (p);
 }
