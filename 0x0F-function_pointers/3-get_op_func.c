@@ -21,7 +21,7 @@ int i = 0;
 
 while (i < 5)
 {
-if (*s == *(ops[i].op))
+if (s != NULL && *s == *(ops[i].op))
 {
 return (*(ops[i].f));
 break;
