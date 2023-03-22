@@ -31,13 +31,13 @@ printf("%d\n", get_op_func(argv[2])(a, b));
 else
 {
 printf("Error\n");
-exit(98);
+exit(99);
 }
 }
 else
 {
 printf("Error\n");
-exit(99);
+exit(98);
 }
 return (0);
 }
