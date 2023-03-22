@@ -25,7 +25,6 @@ while (i < 5)
 if (s != NULL && *s == *(ops[i].op))
 {
 return (*(ops[i].f));
-break;
 }
 i++;
 }
