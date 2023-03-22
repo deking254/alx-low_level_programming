@@ -12,6 +12,7 @@
 int main(int argc, char *argv[])
 {
 int a, b;
+int (*p)(int, int);
 if (argc == 4)
 {
 if (*argv[2] == 47 || *argv[2] == 37 ||
@@ -19,10 +20,11 @@ if (*argv[2] == 47 || *argv[2] == 37 ||
 {
 a = atoi(argv[1]);
 b = atoi(argv[3]);
-if (b == 0 && (*argv[2] == 47 || *argv[2] == 37))
+p = get_op_func(argv[2]);
+if (!p)
 {
 printf("Error\n");
-exit(100);
+exit(99);
 }
 else
 {
