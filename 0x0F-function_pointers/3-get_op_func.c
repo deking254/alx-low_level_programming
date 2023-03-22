@@ -17,9 +17,10 @@ op_t ops[] = {
 {"%", op_mod},
 {NULL, NULL}
 };
-int i = 0;
+int i;
 
-while (i < 5)
+i = 0;
+while (i < 6)
 {
 if (s != NULL && *s == *(ops[i].op))
 {
