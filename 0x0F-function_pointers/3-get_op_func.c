@@ -20,7 +20,7 @@ op_t ops[] = {
 int i;
 
 i = 0;
-while (i < 6)
+while (i < 5)
 {
 if (s != NULL && *s == *(ops[i].op))
 {
