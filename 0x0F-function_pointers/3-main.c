@@ -18,7 +18,7 @@ if (*argv[2] == 47 || *argv[2] == 37 ||
 {
 a = atoi(argv[1]);
 b = atoi(argv[3]);
-if (b == 0 || a == 0)
+if (b == 0 && (*argv[2] == 47 || *argv[2] == 37))
 {
 printf("Error\n");
 exit(100);
