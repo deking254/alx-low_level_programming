@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include "3-calc.h"
 
 /**
@@ -20,8 +21,11 @@ int i = 0;
 
 while (i < 5)
 {
-if (s == (ops[i].op))
-return (ops[i].f);
+if (*s == *(ops[i].op))
+{
+return (*(ops[i].f));
+break;
+}
 i++;
 }
 return (NULL);
