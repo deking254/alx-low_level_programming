@@ -17,6 +17,15 @@ va_start(po, n);
 
 for (i = 0; i < n; i++)
 {
+if (va_arg(po, char *) == NULL)
+{
+printf("(nil)");
+exit(1);
+}
+}
+va_start(po, n);
+for (i = 0; i < n; i++)
+{
 printf("%s", va_arg(po, char *));
 if (i != (n - 1) && separator != NULL)
 printf("%s", separator);
