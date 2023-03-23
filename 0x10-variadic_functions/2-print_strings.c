@@ -13,20 +13,16 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 va_list po;
 unsigned int i;
+char *tyu[100];
 va_start(po, n);
 
 for (i = 0; i < n; i++)
 {
-if (va_arg(po, char *) == NULL)
-{
+tyu[i] = va_arg(po, char *);
+if (tyu[i] == NULL)
 printf("(nil)");
-exit(1);
-}
-}
-va_start(po, n);
-for (i = 0; i < n; i++)
-{
-printf("%s", va_arg(po, char *));
+else
+printf("%s", tyu[i]);
 if (i != (n - 1) && separator != NULL)
 printf("%s", separator);
 }
