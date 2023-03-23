@@ -17,13 +17,8 @@ va_start(po, n);
 for (i = 0; i < n; i++)
 {
 printf("%s", va_arg(po, char *));
-if (separator == NULL)
-printf("(nil)");
-else
-{
 if (i != (n - 1))
 printf("%s", separator);
-}
 }
 printf("\n");
 }
