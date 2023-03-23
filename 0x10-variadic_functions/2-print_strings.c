@@ -16,6 +16,8 @@ unsigned int i;
 va_start(po, n);
 for (i = 0; i < n; i++)
 {
+if (va_arg(po, char *) == NULL)
+printf("nil");
 printf("%s", va_arg(po, char *));
 if (i != (n - 1))
 printf("%s", separator);
