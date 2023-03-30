@@ -12,7 +12,7 @@ if (h != NULL)
 {
 for (i = 0; h != NULL; i++)
 {
-if (h->str != NULL || h->len != NULL)
+if (h->str != NULL && h->len > 0)
 {
 printf("[%u] %s\n", h->len, h->str);
 }
