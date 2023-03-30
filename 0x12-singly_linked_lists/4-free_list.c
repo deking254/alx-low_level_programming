@@ -9,14 +9,13 @@ void free_list(list_t *head)
 {
 list_t *ar;
 list_t *save;
-
-for (ar = head; ar != NULL; )
+if (head != NULL)
+{
+for (ar = head; ar.next != NULL; )
 {
 save = ar->next;
 free(ar);
-if (save != NULL)
 ar = save;
-else
-break;
+}
 }
 }
