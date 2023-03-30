@@ -11,7 +11,7 @@ list_t *ar;
 list_t *save;
 if (head != NULL)
 {
-for (ar = head; ar.next != NULL; )
+for (ar = head; ar != NULL; )
 {
 save = ar->next;
 free(ar);
