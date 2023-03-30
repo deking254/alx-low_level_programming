@@ -22,7 +22,7 @@ h = h->next;
 }
 }
 else
-return (1);
+exit(98);
 
 return (i);
 }
