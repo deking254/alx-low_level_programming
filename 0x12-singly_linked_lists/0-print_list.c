@@ -21,5 +21,8 @@ printf("[0] (nil)\n");
 h = h->next;
 }
 }
+else
+return (1);
+
 return (i);
 }
