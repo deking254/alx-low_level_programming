@@ -21,8 +21,5 @@ printf("[0] (nil)\n");
 h = h->next;
 }
 }
-else
-exit(98);
-
 return (i);
 }
