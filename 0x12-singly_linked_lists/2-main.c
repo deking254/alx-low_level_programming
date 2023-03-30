@@ -11,11 +11,10 @@
 int main(void)
 {
     list_t *head;
-list_t *test;
+
     head = NULL;
     add_node(&head, "Alexandro");
-    test = add_node(&head, "Asaia");
-    printf("this is the shit %s\n", test->str);
+    add_node(&head, "Asaia");
     add_node(&head, "Augustin");
     add_node(&head, "Bennett");
     add_node(&head, "Bilal");
@@ -42,6 +41,8 @@ list_t *test;
     add_node(&head, "Tasneem");
     add_node(&head, "William");
     add_node(&head, "Zee");
+    if (head == NULL)
+    printf("shit");
     print_list(head);
     return (0);
 }
