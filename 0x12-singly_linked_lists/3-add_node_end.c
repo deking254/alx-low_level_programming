@@ -33,5 +33,5 @@ init->next = next_new;
 }
 else
 return (NULL);
-return (init);
+return (next_new);
 }
