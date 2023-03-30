@@ -7,15 +7,12 @@
  */
 void free_list(list_t *head)
 {
-list_t *ar;
 list_t *save;
-if (head != NULL)
+while (head != NULL)
 {
-for (ar = head; ar != NULL; )
-{
-save = ar->next;
-free(ar);
-ar = save;
+save = head->next;
+free(head);
+head = save;
 }
 }
-}
+
