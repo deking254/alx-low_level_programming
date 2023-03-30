@@ -14,6 +14,9 @@ for (ar = head; ar != NULL; )
 {
 save = ar->next;
 free(ar);
+if (save != NULL)
 ar = save;
+else
+break;
 }
 }
