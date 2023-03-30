@@ -11,10 +11,11 @@
 int main(void)
 {
     list_t *head;
-
+list_t *test;
     head = NULL;
     add_node(&head, "Alexandro");
-    add_node(&head, "Asaia");
+    test = add_node(&head, "Asaia");
+    printf("this is the shit %s\n", test->str);
     add_node(&head, "Augustin");
     add_node(&head, "Bennett");
     add_node(&head, "Bilal");
