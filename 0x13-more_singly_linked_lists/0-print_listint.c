@@ -10,7 +10,7 @@ size_t i;
 
 for (i = 0; h != NULL; i++)
 {
-if (sizeof(h->n) == 4)
+if (h->n)
 printf("%d\n", h->n);
 h = h->next;
 }
