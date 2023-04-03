@@ -12,6 +12,8 @@ for (i = 0; h != NULL; i++)
 {
 if (h->n)
 printf("%d\n", h->n);
+else
+printf("%d\n", 0);
 h = h->next;
 }
 return (i);
