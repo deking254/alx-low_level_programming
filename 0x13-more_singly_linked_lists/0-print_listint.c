@@ -10,7 +10,7 @@ size_t i;
 if (h == NULL)
 {
 i = 0;
-return (i);
+return (NULL);
 }
 for (i = 0; h != NULL; i++)
 {
