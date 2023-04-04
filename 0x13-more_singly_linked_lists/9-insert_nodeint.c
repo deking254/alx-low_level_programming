@@ -21,6 +21,7 @@ if (ins != NULL)
 {
 ins->n = n;
 ins->next = tmp;
+return (ins);
 }
 else
 return (NULL);
@@ -46,9 +47,8 @@ tmp = tmp->next;
 }
 else
 {
-break;
 return (NULL);
 }
 }
-return (ins);
+return (tmp);
 }
