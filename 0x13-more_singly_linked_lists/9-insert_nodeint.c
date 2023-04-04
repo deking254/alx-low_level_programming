@@ -21,6 +21,7 @@ if (ins != NULL)
 {
 ins->n = n;
 ins->next = tmp;
+*head = ins;
 return (ins);
 }
 else
