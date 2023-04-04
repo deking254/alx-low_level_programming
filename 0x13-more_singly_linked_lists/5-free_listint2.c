@@ -12,11 +12,11 @@ listint_t *save;
 
 sav = *head;
 save = sav;
-while (sav != NULL)
+while (sav->next != NULL)
 {
 sav = sav->next;
 free(save);
 save = sav;
 }
-sav = NULL;
+*head = NULL;
 }
