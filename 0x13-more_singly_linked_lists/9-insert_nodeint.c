@@ -19,9 +19,9 @@ for (i = 0; i < idx; i++)
 {
 if (tmp != NULL)
 {
-if (i == (idx - 1))
+if (i == (idx - 1) || idx == 0)
 {
-if (ins != NULL)
+if (ins != NULL && n > 0)
 {
 ins->n = n;
 ins->next = tmp->next;
