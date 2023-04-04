@@ -12,7 +12,12 @@ size_t i;
 for (i = 0; h != NULL; i++)
 {
 printf("%d\n", h->n);
+if (h->next)
+{
 h = h->next;
+}
+else
+break;
 }
 return (i);
 }
