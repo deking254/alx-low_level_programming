@@ -21,16 +21,23 @@ if (tmp != NULL)
 {
 if (i == (idx - 1))
 {
+if (ins != NULL)
+{
 ins->n = n;
 ins->next = tmp->next;
 tmp->next = ins;
-tmp->next = ins;
+}
+else
+{
+return (NULL);
+}
 }
 tmp = tmp->next;
 }
 else
 {
 break;
+return (NULL);
 }
 }
 return (tmp);
