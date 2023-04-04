@@ -11,7 +11,7 @@ listint_t *sav;
 listint_t *save;
 sav = *head;
 save = *head;
-if (*head != NULL)
+if (sav != NULL)
 {
 while (sav != NULL)
 {
