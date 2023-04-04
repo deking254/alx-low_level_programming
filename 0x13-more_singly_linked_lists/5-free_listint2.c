@@ -11,6 +11,8 @@ listint_t *sav;
 listint_t *save;
 sav = *head;
 save = *head;
+if (*head != NULL)
+{
 while (sav != NULL)
 {
 sav = sav->next;
@@ -18,4 +20,5 @@ free(save);
 save = sav;
 }
 *head = NULL;
+}
 }
