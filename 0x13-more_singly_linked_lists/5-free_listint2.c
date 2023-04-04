@@ -19,6 +19,7 @@ sav = sav->next;
 free(save);
 save = sav;
 }
+free(sav);	
 *head = NULL;
 }
 }
