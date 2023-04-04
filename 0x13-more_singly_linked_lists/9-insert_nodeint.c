@@ -15,13 +15,23 @@ unsigned int i;
 
 tmp = *head;
 ins = malloc(sizeof(listint_t));
+if (idx == 0)
+{
+if (ins != NULL)
+{
+ins->n = n;
+ins->next = tmp;
+}
+else
+return (NULL);
+}
 for (i = 0; i < idx; i++)
 {
 if (tmp != NULL)
 {
-if (i == (idx - 1) || idx == 0)
+if (i == (idx - 1))
 {
-if (ins != NULL && n > 0)
+if (ins != NULL)
 {
 ins->n = n;
 ins->next = tmp->next;
