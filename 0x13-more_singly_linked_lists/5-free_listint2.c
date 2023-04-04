@@ -21,6 +21,4 @@ save = sav;
 }
 *head = NULL;
 }
-else
-free(*head);
 }
