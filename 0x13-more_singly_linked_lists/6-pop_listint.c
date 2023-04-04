@@ -17,6 +17,8 @@ i = (*head)->n;
 sav = (*head)->next;
 free(*head);
 *head = sav;
-}
 return (i);
+}
+else
+return (0);
 }
