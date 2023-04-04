@@ -1,5 +1,4 @@
 #include "lists.h"
-
 /**
  * insert_nodeint_at_index - check the code
  * @head: g
@@ -15,41 +14,28 @@ unsigned int i;
 
 tmp = *head;
 ins = malloc(sizeof(listint_t));
-if (idx == 0)
-{
-if (ins != NULL)
+if (idx == 0 && ins != NULL)
 {
 ins->n = n;
 ins->next = tmp;
 *head = ins;
-return (ins);
 }
 else
 return (NULL);
-}
 for (i = 0; i < idx; i++)
 {
-if (tmp != NULL)
+if (tmp != NULL && ins != NULL)
 {
 if (i == (idx - 1))
-{
-if (ins != NULL)
 {
 ins->n = n;
 ins->next = tmp->next;
 tmp->next = ins;
 }
-else
-{
-return (NULL);
-}
-}
 tmp = tmp->next;
 }
 else
-{
 return (NULL);
-}
 }
 return (tmp);
 }
