@@ -19,7 +19,6 @@ sav = sav->next;
 free(save);
 save = sav;
 }
-if (*head != NULL)	
-*head = NULL;
+*head = save;
 }
 }
