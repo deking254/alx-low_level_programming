@@ -12,7 +12,7 @@ listint_t *save;
 
 sav = *head;
 save = sav;
-while (sav->next != NULL)
+while (save != NULL)
 {
 sav = sav->next;
 free(save);
