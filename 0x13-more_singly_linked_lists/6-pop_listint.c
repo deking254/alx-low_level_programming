@@ -10,8 +10,9 @@ int pop_listint(listint_t **head)
 listint_t *sav;
 int i;
 
-if (*head && head != NULL)
+if (*head)
 {
+if (sizeof((*head)->n) == 4)
 i = (*head)->n;
 sav = (*head)->next;
 free(*head);
