@@ -19,6 +19,7 @@ if (idx == 0 && ins != NULL)
 ins->n = n;
 ins->next = tmp;
 *head = ins;
+return (ins);
 }
 else
 return (NULL);
