@@ -9,7 +9,7 @@ void free_listint2(listint_t **head)
 {
 listint_t *save;
 listint_t *sav;
-if (*head != NULL)
+if (head != NULL)
 {
 save = *head;
 sav = *head;
