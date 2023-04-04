@@ -11,7 +11,7 @@ listint_t *save;
 save = head;
 if (head != NULL)
 {
-while (head->next != NULL)
+while (head != NULL)
 {
 head = head->next;
 free(save);
