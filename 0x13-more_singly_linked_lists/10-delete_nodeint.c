@@ -24,7 +24,7 @@ else
 {
 for (i = 0; i < index; i++)
 {
-if (i == (index - 1))
+if (i == (index - 1) && tmp->next)
 {
 nextsave = tmp->next->next;
 free(tmp->next);
@@ -32,8 +32,6 @@ tmp->next = nextsave;
 }
 tmp = tmp->next;
 }
-if (tmp == NULL)
-return (-1);
 }
 return (1);
 }
