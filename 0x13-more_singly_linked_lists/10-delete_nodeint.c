@@ -11,6 +11,8 @@ unsigned int i;
 listint_t *tmp;
 listint_t *nextsave;
 tmp = *head;
+if (tmp && head)
+{
 if (index == 0)
 {
 nextsave = tmp->next;
@@ -21,6 +23,8 @@ else
 {
 for (i = 0; i < index; i++)
 {
+if (tmp == NULL)
+return (-1);
 if (i == (index - 1))
 {
 nextsave = tmp->next->next;
@@ -30,8 +34,8 @@ tmp->next = nextsave;
 tmp = tmp->next;
 }
 }
-if (tmp)
 return (1);
+}
 else
 return (-1);
 }
