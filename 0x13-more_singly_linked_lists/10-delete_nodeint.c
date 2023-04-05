@@ -32,6 +32,8 @@ tmp->next = nextsave;
 }
 tmp = tmp->next;
 }
+if (tmp == NULL)
+return (-1);
 }
 return (1);
 }
