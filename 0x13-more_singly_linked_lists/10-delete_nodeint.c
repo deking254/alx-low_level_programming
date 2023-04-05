@@ -1,8 +1,9 @@
 #include "lists.h"
 
 /**
- * main - check the code
- *
+ * delete_nodeint_at_index - check the code
+ * @head: h
+ * @index: i
  * Return: Always 0.
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
