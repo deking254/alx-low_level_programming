@@ -22,7 +22,7 @@ free(tmp);
 }
 else
 {
-for (i = 0; i < index && tmp; i++)
+for (i = 0; i < index; i++)
 {
 if (i == (index - 1))
 {
@@ -33,10 +33,7 @@ tmp->next = nextsave;
 tmp = tmp->next;
 }
 }
-if (tmp)
 return (1);
-else
-return (-1);
 }
 else
 return (-1);
