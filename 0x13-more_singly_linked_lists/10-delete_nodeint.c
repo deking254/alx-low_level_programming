@@ -1,9 +1,8 @@
 #include "lists.h"
 
 /**
- * delete_nodeint_at_index - check the code
- * @head: h
- * @index: i
+ * main - check the code
+ *
  * Return: Always 0.
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
@@ -24,7 +23,9 @@ else
 {
 for (i = 0; i < index; i++)
 {
-if (i == (index - 1) && tmp->next)
+if (tmp == NULL)
+return (-1);
+if (i == (index - 1))
 {
 nextsave = tmp->next->next;
 free(tmp->next);
