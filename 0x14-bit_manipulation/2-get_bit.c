@@ -9,10 +9,9 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 int i;
-char *bits;
+char bits[64];
 unsigned long int m;
 int ind = 0;
-bits = malloc(64);
 for (i = 63; i >= 0; i--)
 {
 m = 1Ul << i;
