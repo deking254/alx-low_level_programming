@@ -29,6 +29,8 @@ bits[ind] = '0';
 ind++;
 }
 }
+else
+return (-1);
 }
 if (bits[63 - index] == 48)
 return (0);
