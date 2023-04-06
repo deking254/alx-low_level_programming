@@ -16,7 +16,7 @@ int ind = 0;
 for (i = 63; i >= 0; i--)
 {
 m = 1Ul << i;
-if (bits != NULL)
+if (index <= 63)
 {
 if ((n & m) == m)
 {
