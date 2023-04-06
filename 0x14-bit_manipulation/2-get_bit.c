@@ -18,7 +18,7 @@ for (i = 63; i >= 0; i--)
 m = 1Ul << i;
 if (bits != NULL)
 {
-if (n & m)
+if ((n & m) == m)
 {
 bits[ind] = '1';
 ind++;
