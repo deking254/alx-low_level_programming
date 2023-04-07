@@ -9,16 +9,13 @@ listint_t *reverse_listint(listint_t **head)
 {
 listint_t *nextsave = NULL;
 listint_t *previous = NULL;
-listint_t *current = *head;
-while (current != NULL)
+while (*head != NULL)
 {
-nextsave = current->next;
-current->next = previous;
-previous = current;
-current = nextsave;
+nextsave = (*head)->next;
+(*head)->next = previous;
+previous = *head;
+*head = nextsave;
 }
 *head = previous;
-if (*head != NULL)
-printf("pree %d\n", (*head)->n);
 return (*head);
 }
