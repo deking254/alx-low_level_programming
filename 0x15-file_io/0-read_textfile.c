@@ -15,7 +15,7 @@ ssize_t i = 0;
 buffer = malloc(1024);
 if (buffer != NULL && filename != NULL)
 {
-fd = open(filename, O_RDWR);
+fd = open(filename, O_RDONLY);
 if (fd != -1)
 {
 n = read(fd, buffer, letters);
