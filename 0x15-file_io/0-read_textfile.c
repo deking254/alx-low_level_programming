@@ -16,7 +16,10 @@ buffer = malloc(1024);
 if (buffer && filename)
 {
 fd = open(filename, O_RDWR);
+if (fd != -1)
 n = read(fd, buffer, letters);
+else
+return (i);
 if (n != -1)
 {
 k = write(STDOUT_FILENO, buffer, letters);
