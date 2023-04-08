@@ -13,7 +13,7 @@ int fd;
 char *buffer;
 ssize_t i = 0;
 buffer = malloc(1024);
-if (buffer && filename)
+if (buffer != NULL && filename != NULL)
 {
 fd = open(filename, O_RDWR);
 if (fd != -1)
@@ -23,7 +23,7 @@ return (i);
 if (n != -1)
 {
 k = write(STDOUT_FILENO, buffer, letters);
-if (k != -1)
+if (k != -1 && n <= k)
 return (n);
 else
 return (i);
