@@ -19,18 +19,25 @@ fd = open(filename, O_RDWR);
 if (fd != -1)
 n = read(fd, buffer, letters);
 else
+{
+free(buffer);
 return (i);
+}
 if (n != -1)
 {
 k = write(STDOUT_FILENO, buffer, letters);
-if (k != -1 && n <= k)
+if (k != -1)
 {
 close(fd);
 free(buffer);
 return (n);
 }
 else
+{
+close(fd);
+free(buffer);
 return (i);
+}
 }
 else
 return (i);
