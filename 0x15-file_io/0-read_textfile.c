@@ -24,7 +24,11 @@ if (n != -1)
 {
 k = write(STDOUT_FILENO, buffer, letters);
 if (k != -1 && n <= k)
+{
+close(fd);
+free(buffer);
 return (n);
+}
 else
 return (i);
 }
