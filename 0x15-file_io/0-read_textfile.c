@@ -17,7 +17,10 @@ if (buffer != NULL && filename != NULL)
 {
 fd = open(filename, O_RDWR);
 if (fd != -1)
+{
 n = read(fd, buffer, letters);
+close(fd);
+}
 else
 return (i);
 if (n != -1)
@@ -25,7 +28,6 @@ if (n != -1)
 k = write(STDOUT_FILENO, buffer, letters);
 if (k != -1)
 {
-close(fd);
 free(buffer);
 return (n);
 }
