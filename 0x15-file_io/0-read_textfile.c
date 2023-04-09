@@ -16,17 +16,17 @@ buffer = malloc(letters);
 if (buffer != NULL && filename != NULL)
 {
 fd = open(filename, O_RDONLY);
-if (fd != -1)
+if (fd > 0)
 {
 while ((n = read(fd, buffer, letters)) > 0)
 {
 k = write(STDOUT_FILENO, buffer, letters);
-if (k == -1)
+if (k < 1)
 {
 return (i);
 }
 else
-return (k);
+return (n);
 }
 }
 else
