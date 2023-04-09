@@ -24,9 +24,9 @@ if (n != -1)
 k = write(STDOUT_FILENO, buffer, n);
 if (k != -1)
 {
-return (k);
 free(buffer);
 close(fd);
+return (k);
 }
 else
 return (i);
