@@ -25,7 +25,6 @@ l = write(fd, text_content, length);
 if (l != -1)
 {
 close(fd);
-free(text_content);
 return (1);
 }
 else
@@ -36,8 +35,9 @@ return (-1);
 }
 else
 {
+if (fd != 1)
 close(fd);
-return (-1);
+return (1);
 }
 }
 return (-1);
