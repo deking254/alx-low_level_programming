@@ -20,25 +20,22 @@ if (fd != -1)
 {
 while ((n = read(fd, buffer, letters)) > 0)
 {
-k = write(STDOUT_FILENO, buffer, letters);
-if (k == -1 && k < n)
+k = write(STDOUT_FILENO, buffer, n);
+if (k == -1)
 {
-free(buffer);
-close(fd);
 return (i);
 }
 else
 {
 free(buffer);
 close(fd);
-return (n);
+return (k);
 }
 }
 }
 else
 {
 free(buffer);
-close(fd);
 return (i);
 }
 }
