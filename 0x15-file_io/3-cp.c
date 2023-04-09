@@ -16,13 +16,13 @@ if (ac != 3)
 {
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 exit(97); }
-fdfrom = open(av[1], O_RDWR, perm);
+fdfrom = open(av[1], O_RDWR);
 fdto = open(av[2], O_RDWR | O_CREAT | O_TRUNC, perm);
 n = read(fdfrom, buffer, 1024);
-if (av[1] != NULL && n != -1)
+if (av[1] != NULL && n != -1 && fdfrom != -1)
 {
 l = write(fdto, buffer, n);
-if (l != -1)
+if (l != -1 && fdto != -1)
 {
 c = close(fdto);
 cc = close(fdfrom);
