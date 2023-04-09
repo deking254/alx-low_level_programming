@@ -23,14 +23,24 @@ while ((n = read(fd, buffer, letters)) > 0)
 k = write(STDOUT_FILENO, buffer, letters);
 if (k == -1 && k < n)
 {
+free(buffer);
+close(fd);
 return (i);
 }
 else
+{
+free(buffer);
+close(fd);
 return (n);
 }
 }
+}
 else
+{
+free(buffer);
+close(fd);
 return (i);
+}
 }
 return (i);
 }
