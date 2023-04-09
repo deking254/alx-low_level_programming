@@ -32,16 +32,16 @@ dprintf(2, "Error: Can't close fd  %d\n", fdto);
 exit(100); }
 if (cc == -1)
 {
-dprintf(2, "Error: Can't close fd  %d\n", fdto);
+dprintf(2, "Error: Can't close fd  %d\n", fdfrom);
 exit(100); }
 }
 else
 {
-dprintf(2, "Error: Can't write to  %s\n", av[0]);
+dprintf(2, "Error: Can't write to  %s\n", av[2]);
 exit(99); }
 }
 else
 {
-dprintf(2, "Error: Can't read from file %s\n", av[0]);
+dprintf(2, "Error: Can't read from file %s\n", av[1]);
 exit(98); }
 return (0); }
