@@ -10,13 +10,13 @@ int main(int ac, char **av)
 {
 int fdfrom, fdto, c, cc;
 ssize_t n, l;
-void *buffer[1024];
+char buffer[1024];
 mode_t perm = 0664;
 if (ac != 3)
 {
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 exit(97); }
-fdfrom = open(av[1], O_RDWR, perm);
+fdfrom = open(av[1], O_RDWR);
 fdto = open(av[2], O_RDWR |O_CREAT | O_TRUNC, perm);
 n = read(fdfrom, buffer, 1024);
 if (av[1] != NULL && n != -1 && fdfrom != -1)
