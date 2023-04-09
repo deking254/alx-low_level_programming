@@ -30,14 +30,12 @@ else
 free(buffer);
 close(fd);
 return (k);
+exit(0);
 }
 }
 }
 else
-{
-free(buffer);
 return (i);
-}
 }
 return (i);
 }
