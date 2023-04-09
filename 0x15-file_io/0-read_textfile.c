@@ -22,7 +22,10 @@ n = read(fd, buffer, letters);
 close(fd);
 }
 else
+{
+free(buffer);
 return (i);
+}
 if (n > 0)
 {
 k = write(STDOUT_FILENO, buffer, letters);
