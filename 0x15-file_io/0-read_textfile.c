@@ -18,28 +18,19 @@ if (buffer != NULL && filename != NULL)
 fd = open(filename, O_RDONLY);
 if (fd != -1)
 {
-n = read(fd, buffer, letters);
-close(fd);
-}
-else
-{
-free(buffer);
-return (i);
-}
-if (n > 0)
+while ((n = read(fd, buffer, letters)) > 0)
 {
 k = write(STDOUT_FILENO, buffer, letters);
-if (k != -1)
+if (k == -1)
 {
-free(buffer);
-return (n);
+return (i);
+}
+else
+return (k);
+}
 }
 else
 return (i);
 }
-else
-return (i);
-}
-else
 return (i);
 }
