@@ -18,7 +18,6 @@ umask(new_umask);
 if (ac != 3)
 {
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-free(buffer);
 exit(97); }
 buffer = createbuffer(av[1]);
 fdfrom = open(av[1], O_RDONLY);
