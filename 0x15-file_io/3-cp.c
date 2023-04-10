@@ -45,7 +45,7 @@ else
 {
 readErrorhandler(av[1], buffer);
 closefilehandler(fdfrom, buffer); }
-free(buffer)
+free(buffer);
 return (0); }
 /**
  * closefilehandler - check the code
