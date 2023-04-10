@@ -14,13 +14,13 @@ ssize_t n, l;
 char *buffer;
 mode_t new_umask = 0027;
 mode_t perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
-buffer = createbuffer(av[1]);
 umask(new_umask);
 if (ac != 3)
 {
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 free(buffer);
 exit(97); }
+buffer = createbuffer(av[1]);
 fdfrom = open(av[1], O_RDONLY);
 n = read(fdfrom, buffer, 1024);
 fdto = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, perm);
@@ -49,7 +49,6 @@ return (0);
 /**
  * closefilehandler - check the code
  * @fd: content number
- * @buffer: pointers
  * Return: Always 0.
  */
 void closefilehandler(int fd)
