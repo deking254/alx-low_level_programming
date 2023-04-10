@@ -1,6 +1,5 @@
 #include "main.h"
-
-void closefilehandler(int fd, char *buffer);
+void closefilehandler(int fd);
 char *createbuffer(char *file);
 /**
  * main - check the code
@@ -31,22 +30,20 @@ if (fdfrom == -1 || n == -1)
 dprintf(STDERR_FILENO,
 "Error: Can't read from file %s\n", av[1]);
 free(buffer);
-exit(98);
-}
+exit(98); }
 l = write(fdto, buffer, n);
 if (fdto == -1 || l == -1)
 {
 dprintf(STDERR_FILENO,
 "Error: Can't write to %s\n", av[2]);
 free(buffer);
-exit(99);
-}
+exit(99); }
 n = read(fdfrom, buffer, 1024);
 fdto = open(av[2], O_WRONLY | O_APPEND);
 } while (n > 0);
 free(buffer);
-closefilehandler(fdfrom, buffer);
-closefilehandler(fdto, buffer);
+closefilehandler(fdfrom);
+closefilehandler(fdto);
 return (0);
 }
 /**
@@ -55,14 +52,13 @@ return (0);
  * @buffer: pointers
  * Return: Always 0.
  */
-void closefilehandler(int fd, char *buffer)
+void closefilehandler(int fd)
 {
 int c;
 c = close(fd);
 if (c == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't close fd %u\n", fd);
-free(buffer);
 exit(100);
 }
 }
