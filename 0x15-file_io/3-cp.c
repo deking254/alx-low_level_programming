@@ -85,7 +85,7 @@ void writeErrorhandler(char *file, char *buffer)
 {
 dprintf(STDERR_FILENO, "Error: Can't Can't write to %s\n", file);
 free(buffer);
-exit(98);
+exit(99);
 }
 /**
  * createbuffer - check the code
