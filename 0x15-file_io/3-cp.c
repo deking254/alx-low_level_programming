@@ -11,7 +11,10 @@ int main(int ac, char **av)
 int fdfrom, fdto, c, cc;
 ssize_t n, l;
 char buffer[1024];
-mode_t perm = 0664;
+mode_t new_umask = 0027;
+mode_t perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+umask(new_umask);
+
 if (ac != 3)
 {
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
