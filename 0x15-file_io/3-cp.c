@@ -10,10 +10,12 @@ int main(int ac, char **av)
 {
 int fdfrom, fdto, c, cc;
 ssize_t n, l;
-char buffer[1024];
+char *buffer;
 mode_t new_umask = 0027;
 mode_t perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+buffer = malloc(sizeof(char) * 1024);
 umask(new_umask);
+
 
 if (ac != 3)
 {
@@ -33,6 +35,7 @@ if (fdto != -1)
 l = write(fdto, buffer, n);
 if (l != -1)
 {
+free(buffer);
 c = close(fdfrom);
 cc = close(fdto);
 if (c == -1)
