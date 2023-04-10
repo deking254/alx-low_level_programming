@@ -14,8 +14,8 @@ char buffer[1024];
 mode_t perm = 0664;
 if (ac != 3)
 {
-dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-exit(97); }
+exit(97);
+dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");}
 fdfrom = open(av[1], O_RDWR);
 fdto = open(av[2], O_RDWR |O_CREAT | O_TRUNC, perm);
 n = read(fdfrom, buffer, 1024);
