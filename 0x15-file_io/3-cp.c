@@ -1,8 +1,6 @@
 #include "main.h"
 
 void closefilehandler(int fd, char *buffer);
-void readErrorhandler(char *file, char *buffer);
-void writeErrorhandler(char *file, char *buffer);
 char *createbuffer(char *file);
 /**
  * main - check the code
@@ -26,24 +24,31 @@ free(buffer);
 exit(97); }
 fdfrom = open(av[1], O_RDONLY);
 n = read(fdfrom, buffer, 1024);
-fdto = open(av[2], O_RDWR | O_CREAT | O_TRUNC, perm);
+fdto = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, perm);
 do {
-l = write(fdto, buffer, n);
-if (l == -1 || fdto == -1)
+if (fdfrom == -1 || n == -1)
 {
-writeErrorhandler(av[2], buffer);
+dprintf(STDERR_FILENO,
+"Error: Can't read from file %s\n", av[1]);
+free(buffer);
+exit(98);
 }
-if (fdfrom != -1 || n != -1)
+l = write(fdto, buffer, n);
+if (fdto == -1 || l == -1)
 {
-readErrorhandler(av[1], buffer);
+dprintf(STDERR_FILENO,
+"Error: Can't write to %s\n", av[2]);
+free(buffer);
+exit(99);
 }
 n = read(fdfrom, buffer, 1024);
 fdto = open(av[2], O_WRONLY | O_APPEND);
 } while (n > 0);
+free(buffer);
 closefilehandler(fdfrom, buffer);
 closefilehandler(fdto, buffer);
-free(buffer);
-return (0); }
+return (0);
+}
 /**
  * closefilehandler - check the code
  * @fd: content number
@@ -60,30 +65,6 @@ dprintf(STDERR_FILENO, "Error: Can't close fd %u\n", fd);
 free(buffer);
 exit(100);
 }
-}
-/**
- * readErrorhandler - check the code
- * @file: content number
- * @buffer: pointers
- * Return: Always 0.
- */
-void readErrorhandler(char *file, char *buffer)
-{
-dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
-free(buffer);
-exit(98);
-}
-/**
- * writeErrorhandler - check the code
- * @file: content number
- * @buffer: pointers
- * Return: Always 0.
- */
-void writeErrorhandler(char *file, char *buffer)
-{
-dprintf(STDERR_FILENO, "Error: Can't Can't write to %s\n", file);
-free(buffer);
-exit(99);
 }
 /**
  * createbuffer - check the code
