@@ -27,24 +27,21 @@ exit(97); }
 fdfrom = open(av[1], O_RDONLY);
 n = read(fdfrom, buffer, 1024);
 fdto = open(av[2], O_RDWR | O_CREAT | O_TRUNC, perm);
-if (fdfrom != -1 || n != -1)
-{
 do {
 l = write(fdto, buffer, n);
 if (l == -1 || fdto == -1)
 {
-closefilehandler(fdto, buffer);
 writeErrorhandler(av[2], buffer);
+}
+if (fdfrom != -1 || n != -1)
+{
+readErrorhandler(av[1], buffer);
 }
 n = read(fdfrom, buffer, 1024);
 fdto = open(av[2], O_WRONLY | O_APPEND);
 } while (n > 0);
 closefilehandler(fdfrom, buffer);
 closefilehandler(fdto, buffer); }
-else
-{
-readErrorhandler(av[1], buffer);
-closefilehandler(fdfrom, buffer); }
 free(buffer);
 return (0); }
 /**
@@ -60,7 +57,6 @@ c = close(fd);
 if (c == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't close fd %u\n", fd);
-free(buffer);
 exit(100);
 }
 }
