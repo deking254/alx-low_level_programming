@@ -41,7 +41,7 @@ n = read(fdfrom, buffer, 1024);
 fdto = open(av[2], O_WRONLY | O_APPEND);
 } while (n > 0);
 closefilehandler(fdfrom, buffer);
-closefilehandler(fdto, buffer); }
+closefilehandler(fdto, buffer);
 free(buffer);
 return (0); }
 /**
@@ -57,6 +57,7 @@ c = close(fd);
 if (c == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't close fd %u\n", fd);
+free(buffer);
 exit(100);
 }
 }
