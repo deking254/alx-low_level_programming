@@ -26,14 +26,14 @@ exit(97); }
 fdfrom = open(av[1], O_RDWR);
 n = read(fdfrom, buffer, 1024);
 fdto = open(av[2], O_RDWR | O_CREAT | O_TRUNC, perm);
-if (fdfrom != -1 && n != -1)
+if (fdfrom != -1 || n != -1)
 {
 do {
 l = write(fdto, buffer, n);
-if (l == -1 && fdto == -1)
+if (l == -1 || fdto == -1)
 writeErrorhandler(av[2], buffer);
 n = read(fdfrom, buffer, 1024);
-fdto = open(av[2], O_RDWR | O_APPEND, perm);
+fdto = open(av[2], O_RDWR | O_APPEND);
 } while (n > 0);
 closefilehandler(fdto, buffer);
 closefilehandler(fdfrom, buffer);
