@@ -12,9 +12,6 @@ int main(int ac, char **av)
 int fdfrom, fdto;
 ssize_t n, l;
 char *buffer;
-mode_t new_umask = 0027;
-mode_t perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
-umask(new_umask);
 if (ac != 3)
 {
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
@@ -22,7 +19,7 @@ exit(97); }
 buffer = createbuffer(av[1]);
 fdfrom = open(av[1], O_RDONLY);
 n = read(fdfrom, buffer, 1024);
-fdto = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, perm);
+fdto = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 do {
 if (fdfrom == -1 || n == -1)
 {
