@@ -31,17 +31,20 @@ if (fdfrom != -1 || n != -1)
 do {
 l = write(fdto, buffer, n);
 if (l == -1 || fdto == -1)
+{
+closefilehandler(fdto, buffer);
 writeErrorhandler(av[2], buffer);
+}
 n = read(fdfrom, buffer, 1024);
 fdto = open(av[2], O_RDWR | O_APPEND);
 } while (n > 0);
-closefilehandler(fdto, buffer);
 closefilehandler(fdfrom, buffer);
-}
+closefilehandler(fdto, buffer); }
 else
+{
 readErrorhandler(av[1], buffer);
-return (0);
-}
+closefilehandler(fdfrom, buffer); }
+return (0); }
 /**
  * closefilehandler - check the code
  * @fd: content number
