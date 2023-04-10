@@ -3,6 +3,7 @@
 void closefilehandler(int fd, char *buffer);
 void readErrorhandler(char *file, char *buffer);
 void writeErrorhandler(char *file, char *buffer);
+char *createbuffer(char *file);
 /**
  * main - check the code
  * @ac: content number
@@ -16,7 +17,7 @@ ssize_t n, l;
 char *buffer;
 mode_t new_umask = 0027;
 mode_t perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
-buffer = malloc(sizeof(char) * 1024);
+buffer = createbuffer(av[1]);
 umask(new_umask);
 if (ac != 3)
 {
@@ -85,4 +86,20 @@ void writeErrorhandler(char *file, char *buffer)
 dprintf(STDERR_FILENO, "Error: Can't Can't write to %s\n", file);
 free(buffer);
 exit(98);
+}
+/**
+ * createbuffer - check the code
+ * @file: content number
+ * Return: Always 0.
+ */
+char *createbuffer(char *file)
+{
+char *buffer;
+buffer = malloc(sizeof(char) * 1024);
+if (buffer == NULL)
+{
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
+exit(98);
+}
+return (buffer);
 }
