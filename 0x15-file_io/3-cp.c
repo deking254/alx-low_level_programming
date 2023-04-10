@@ -23,7 +23,7 @@ if (ac != 3)
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 free(buffer);
 exit(97); }
-fdfrom = open(av[1], O_RDWR);
+fdfrom = open(av[1], O_RDONLY);
 n = read(fdfrom, buffer, 1024);
 fdto = open(av[2], O_RDWR | O_CREAT | O_TRUNC, perm);
 if (fdfrom != -1 || n != -1)
@@ -36,7 +36,7 @@ closefilehandler(fdto, buffer);
 writeErrorhandler(av[2], buffer);
 }
 n = read(fdfrom, buffer, 1024);
-fdto = open(av[2], O_RDWR | O_APPEND);
+fdto = open(av[2], O_WRONLY | O_APPEND);
 } while (n > 0);
 closefilehandler(fdfrom, buffer);
 closefilehandler(fdto, buffer); }
