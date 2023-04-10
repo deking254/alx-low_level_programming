@@ -1,5 +1,8 @@
 #include "main.h"
 
+void closefilehandler(int fd, char *buffer);
+void readErrorhandler(char *file, char *buffer);
+void writeErrorhandler(char *file, char *buffer);
 /**
  * main - check the code
  * @ac: content number
@@ -8,83 +11,75 @@
  */
 int main(int ac, char **av)
 {
-int fdfrom, fdto, c, cc;
+int fdfrom, fdto;
 ssize_t n, l;
 char *buffer;
 mode_t new_umask = 0027;
 mode_t perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 buffer = malloc(sizeof(char) * 1024);
 umask(new_umask);
-
-
 if (ac != 3)
 {
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 free(buffer);
 exit(97); }
-if (av[1] != NULL)
-{
 fdfrom = open(av[1], O_RDWR);
-if (fdfrom != -1)
-{
 n = read(fdfrom, buffer, 1024);
-if (n != -1)
-{
 fdto = open(av[2], O_RDWR | O_CREAT | O_TRUNC, perm);
-if (fdto != -1)
+if (fdfrom != -1 && n != -1)
 {
+do {
 l = write(fdto, buffer, n);
-if (l != -1)
+if (l == -1 && fdto == -1)
+writeErrorhandler(av[2], buffer);
+n = read(fdfrom, buffer, 1024);
+fdto = open(av[2], O_RDWR | O_APPEND, perm);
+} while (n > 0);
+closefilehandler(fdto, buffer);
+closefilehandler(fdfrom, buffer);
+}
+else
+readErrorhandler(av[1], buffer);
+return (0);
+}
+/**
+ * closefilehandler - check the code
+ * @fd: content number
+ * @buffer: pointers
+ * Return: Always 0.
+ */
+void closefilehandler(int fd, char *buffer)
 {
-free(buffer);
-c = close(fdfrom);
-cc = close(fdto);
+int c;
+c = close(fd);
 if (c == -1)
 {
-dprintf(STDERR_FILENO,"Error: Can't close fd %u\n", fdfrom);
-free(buffer);
-exit(100);
-}
-if (cc == -1)
-{
-dprintf(STDERR_FILENO,"Error: Can't close fd %u\n", fdto);
+dprintf(STDERR_FILENO, "Error: Can't close fd %u\n", fd);
 free(buffer);
 exit(100);
 }
 }
-else
+/**
+ * readErrorhandler - check the code
+ * @file: content number
+ * @buffer: pointers
+ * Return: Always 0.
+ */
+void readErrorhandler(char *file, char *buffer)
 {
-dprintf(STDERR_FILENO,"Error: Can't Can't write to %s\n", av[2]);
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
 free(buffer);
 exit(98);
 }
-}
-else
+/**
+ * writeErrorhandler - check the code
+ * @file: content number
+ * @buffer: pointers
+ * Return: Always 0.
+ */
+void writeErrorhandler(char *file, char *buffer)
 {
-dprintf(STDERR_FILENO,"Error: Can't Can't write to %s\n", av[2]);
+dprintf(STDERR_FILENO, "Error: Can't Can't write to %s\n", file);
 free(buffer);
 exit(98);
-}
-}
-else
-{
-dprintf(STDERR_FILENO,"Error: Can't read from file %s\n", av[1]);
-free(buffer);
-exit(98);
-}
-}
-else
-{
-dprintf(STDERR_FILENO,"Error: Can't read from file %s\n", av[1]);
-free(buffer);
-exit(98);
-}
-}
-else
-{
-dprintf(STDERR_FILENO,"Error: Can't read from file %s\n", av[1]);
-free(buffer);
-exit(98);
-}
-return (0);
 }
