@@ -20,6 +20,7 @@ umask(new_umask);
 if (ac != 3)
 {
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+free(buffer);
 exit(97); }
 if (av[1] != NULL)
 {
@@ -36,47 +37,53 @@ l = write(fdto, buffer, n);
 if (l != -1)
 {
 free(buffer);
-printf("pere%u\n", fdfrom);
 c = close(fdfrom);
 cc = close(fdto);
 if (c == -1)
 {
 dprintf(STDERR_FILENO,"Error: Can't close fd %u\n", fdfrom);
+free(buffer);
 exit(100);
 }
 if (cc == -1)
 {
 dprintf(STDERR_FILENO,"Error: Can't close fd %u\n", fdto);
+free(buffer);
 exit(100);
 }
 }
 else
 {
 dprintf(STDERR_FILENO,"Error: Can't Can't write to %s\n", av[2]);
+free(buffer);
 exit(98);
 }
 }
 else
 {
 dprintf(STDERR_FILENO,"Error: Can't Can't write to %s\n", av[2]);
+free(buffer);
 exit(98);
 }
 }
 else
 {
 dprintf(STDERR_FILENO,"Error: Can't read from file %s\n", av[1]);
+free(buffer);
 exit(98);
 }
 }
 else
 {
 dprintf(STDERR_FILENO,"Error: Can't read from file %s\n", av[1]);
+free(buffer);
 exit(98);
 }
 }
 else
 {
 dprintf(STDERR_FILENO,"Error: Can't read from file %s\n", av[1]);
+free(buffer);
 exit(98);
 }
 return (0);
