@@ -36,6 +36,7 @@ l = write(fdto, buffer, n);
 if (l != -1)
 {
 free(buffer);
+printf("pere%u\n", fdfrom);
 c = close(fdfrom);
 cc = close(fdto);
 if (c == -1)
