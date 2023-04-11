@@ -133,7 +133,7 @@ exit(98);
  * @argv:variables
  * Return: Always 0.
  */
-int main (int __attribute__((__unused__))argc, char **argv)
+int main(int __attribute__((__unused__))argc, char **argv)
 {
 int fd;
 ssize_t n;
@@ -164,6 +164,8 @@ magic(hder->e_ident);
 class(hder->e_ident);
 data(hder->e_ident);
 version(hder->e_ident);
+free(hder);
+closefile(fd);
 return (0);
 }
 
