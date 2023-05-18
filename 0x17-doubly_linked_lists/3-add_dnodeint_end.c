@@ -3,8 +3,9 @@
 #include "lists.h"
 
 /**
- * main - check the code
- *
+ * add_dnodeint_end - check the code
+ * @head: hed
+ * @n: n
  * Return: Always EXIT_SUCCESS.
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
@@ -12,27 +13,23 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 dlistint_t *new;
 dlistint_t *ne = *head;
 new = malloc(sizeof(dlistint_t));
-if (*head == NULL)
+if (new != NULL)
 {
 new->n = n;
-new->prev = NULL;
 new->next = NULL;
-*head = new;
+new->prev = *head;
 }
 else
+return (NULL);
+if(*head == NULL)
 {
-while (ne)
+*head = new;
+return (new);
+}
+while (ne->next != NULL)
 {
 ne = ne->next;
 }
-new->n = n;
-new->prev = *head;
-new->next = NULL;
-while (new)
-{
-*head = new;
-new = new->prev;
-}
-}
+ne->next = new;
 return (new);
 }
