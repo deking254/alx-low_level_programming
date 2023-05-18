@@ -21,7 +21,9 @@ if (ne)
 new->prev = ne->prev;
 else
 new->prev = NULL;
-}
 *head = new;
+}
+else
+return (NULL);
 return (new);
 }
