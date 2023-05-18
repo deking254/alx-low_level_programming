@@ -9,17 +9,18 @@
  */
 void free_dlistint(dlistint_t *head)
 {
-int i = 0, j = 0;
-dlistint_t *ne = head;
-while (ne)
+int i = 0;
+while (head)
 {
-ne = ne->next;
-i++;
-}
-for (j = 0; j <= i; j++)
+if (head != NULL)
 {
 free(head->prev);
-head = head->next;
 }
+else
+{
 free(head);
+}
+head = head->next;
+i++;
+}
 }
