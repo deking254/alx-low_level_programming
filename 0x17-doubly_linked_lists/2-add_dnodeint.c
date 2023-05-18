@@ -3,8 +3,9 @@
 #include "lists.h"
 
 /**
- * main - check the code
- *
+ * add_dnodeint - check the code
+ * @head: hed
+ * @n: rty
  * Return: Always EXIT_SUCCESS.
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
