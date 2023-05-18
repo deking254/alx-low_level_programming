@@ -21,7 +21,7 @@ new->prev = *head;
 }
 else
 return (NULL);
-if(*head == NULL)
+if (*head == NULL)
 {
 *head = new;
 return (new);
@@ -30,6 +30,7 @@ while (ne->next != NULL)
 {
 ne = ne->next;
 }
+new->prev = ne;
 ne->next = new;
 return (new);
 }
