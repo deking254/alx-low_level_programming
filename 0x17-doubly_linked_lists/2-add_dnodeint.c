@@ -23,7 +23,8 @@ else
 new->prev = NULL;
 *head = new;
 }
-else
+if (new == NULL)
 return (NULL);
+else
 return (new);
 }
