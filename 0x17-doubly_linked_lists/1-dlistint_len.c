@@ -2,8 +2,8 @@
 #include "lists.h"
 
 /**
- * main - check the code
- *
+ * dlistint_len - check the code
+ * @h: h
  * Return: Always EXIT_SUCCESS.
  */
 size_t dlistint_len(const dlistint_t *h)
