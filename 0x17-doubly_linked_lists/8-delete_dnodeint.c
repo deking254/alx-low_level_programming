@@ -23,24 +23,25 @@ if (index == 0)
 if (ne->next)
 {
 *head = ne->next;
-free(ne);
-return (1); }
+free(ne); }
 else
 {
 free(*head);
-*head = NULL;
-return (1); }
+*head = NULL; }
+return (1);
 }
-if (ne->next)
+else
+{
+if (ne->next->next)
 {
 ne->next->prev = ne->prev;
 ne->prev->next = ne->next;
 free(ne);
-return (1); }
+}
 else
 {
 free(ne);
-ne = NULL;
+ne = NULL; }
 return (1); }
 }
 ne = ne->next;
