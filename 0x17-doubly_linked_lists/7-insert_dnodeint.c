@@ -18,21 +18,23 @@ new = malloc(sizeof(dlistint_t));
 if (new != NULL)
 {
 new->n = n;
-while (*h)
+while (ne)
 {
 if (i != idx)
 {
-if (*h != NULL)
-*h = ne->next;
-if (*h == NULL)
-break;
-}
-if (i == idx)
+if (ne != NULL)
 {
-new->next = *h;
-new->prev = ne->prev;
-ne->prev = new;
+if (i == idx - 1)
+{
+new->next = ne->next;
+ne->next = new;
 return (new);
+}
+ne = ne->next;
+i++;
+}
+if (ne == NULL)
+break;
 }
 }
 }
