@@ -22,16 +22,16 @@ if (index == 0)
 {
 if (ne->next)
 {
-ne = ne->next;
-free(ne->prev);
-*head = ne;
+*head = ne->next;
+free(ne);
+return (1);
 }
 else
 {
 free(ne);
 *head = NULL;
-}
 return (1);
+}
 }
 if (ne->next)
 {
