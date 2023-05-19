@@ -27,6 +27,9 @@ if (ne != NULL)
 if (i == idx - 1)
 {
 new->next = ne->next;
+if (ne->next)
+ne->next->prev = new;
+new->prev = ne;
 ne->next = new;
 return (new);
 }
