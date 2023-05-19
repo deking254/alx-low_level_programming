@@ -34,10 +34,11 @@ ne->next = new;
 return (new);
 }
 ne = ne->next;
-i++;
-}
+i++; }
 if (ne == NULL)
-break;
+{
+free(new);
+break; }
 }
 if (idx == 0)
 {
@@ -45,9 +46,7 @@ new->next = ne;
 new->prev = NULL;
 ne->prev = new;
 *h = new;
-return (new);
+return (new); }
 }
 }
-}
-return (NULL);
-}
+return (NULL); }
