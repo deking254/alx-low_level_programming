@@ -36,6 +36,14 @@ i++;
 if (ne == NULL)
 break;
 }
+if (idx == 0)
+{
+new->next = ne;
+new->prev = NULL;
+ne->prev = new;
+*h = new;
+return (new);
+}
 }
 }
 return (NULL);
