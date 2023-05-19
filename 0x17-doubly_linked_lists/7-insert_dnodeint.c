@@ -24,10 +24,8 @@ if (i != idx)
 {
 if (*h != NULL)
 *h = ne->next;
-else
+if (*h == NULL)
 break;
-}
-}
 }
 if (i == idx)
 {
@@ -35,6 +33,8 @@ new->next = *h;
 new->prev = ne->prev;
 ne->prev = new;
 return (new);
+}
+}
 }
 return (NULL);
 }

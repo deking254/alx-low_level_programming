@@ -3,8 +3,8 @@
 #include "lists.h"
 
 /**
- * main - check the code
- *
+ * free_dlistint - check the code
+ * @head: hed
  * Return: Always EXIT_SUCCESS.
  */
 void free_dlistint(dlistint_t *head)
