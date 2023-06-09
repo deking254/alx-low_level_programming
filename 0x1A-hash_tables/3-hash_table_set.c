@@ -10,7 +10,6 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-unsigned long int index = key_index((const unsigned char *)key, 1024);
 hash_node_t **hd;
 char *newval = (char *)value;
 hash_node_t *new;
@@ -22,6 +21,6 @@ new->value = newval;
 new->next = NULL;
 }
 hd = ht->array;
-hd[index] = new;
+hd[0] = new;
 return (1);
 }
