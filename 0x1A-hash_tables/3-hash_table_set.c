@@ -38,9 +38,14 @@ if (l != index)
 ht->array[index] = new;
 else
 {
+if (strcmp(key, ht->array[index]->key) == 0)
+ht->array[index] = new;
+else
+{
 new->next = ht->array[index];
 ht->array[index] = new;
 l = index; }
+}
 }
 else
 return (0); }
