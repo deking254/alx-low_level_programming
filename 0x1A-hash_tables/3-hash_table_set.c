@@ -22,7 +22,6 @@ new->value = newval;
 new->next = NULL;
 }
 hd = ht->array;
-hd[0] = new;
-printf("%s\n", hd[index]->key);
+hd[index] = new;
 return (1);
 }
