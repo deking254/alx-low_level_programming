@@ -27,12 +27,10 @@ index = key_index((const unsigned char *)key, ht->size);
 new->key = (char *)key;
 new->next = NULL;
 newval = malloc((strlen(value) + 1) * sizeof(char));
-if (newval != NULL)
+if (newval != NULL && ht->array)
 {
 strcpy(newval, value);
 new->value = newval;
-if (ht->array)
-{
 if (ht->array[index] == NULL)
 ht->array[index] = new;
 else
@@ -46,8 +44,6 @@ ht->array[index] = new;
 }
 }
 }
-else
-return (0); }
 else
 return (0); }
 else
