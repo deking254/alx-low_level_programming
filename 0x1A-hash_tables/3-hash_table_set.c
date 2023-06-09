@@ -1,6 +1,7 @@
 #include "hash_tables.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 /**
  * hash_table_set - check the code
  * @key: key
@@ -17,6 +18,8 @@ char *newval = (char *)value;
 new = malloc(sizeof(hash_node_t));
 if (new)
 {
+if (key == NULL || strlen(key) == 0)
+return (0);
 new->key = (char *)key;
 new->value = newval;
 new->next = NULL;
