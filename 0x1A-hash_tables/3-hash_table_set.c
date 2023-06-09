@@ -21,7 +21,7 @@ new->value = (char *)value;
 new->next = NULL;
 }
 hd = ht->array;
-hd[index] = new;
+hd[0] = new;
 printf("%s\n", hd[index]->key);
 return (1);
 }
