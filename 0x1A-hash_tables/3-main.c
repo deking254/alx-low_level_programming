@@ -20,6 +20,6 @@ int main(void)
     hash_table_set(ht, "heliotropes", "nrospora");
     hash_table_set(ht, "neurospora", "yuou");
     hash_table_set(ht, "", "");
-    printf("%s\n", ht->array[0]->next->key);
+    printf("%s\n", ht->array[173]->value);
     return (EXIT_SUCCESS);
 }
