@@ -23,6 +23,9 @@ new->next = NULL;
 }
 hd = ht->array;
 index = key_index((const unsigned char *)key, ht->size);
+if (hd[index])
+hd[0] = new;
+else
 hd[index] = new;
 return (1);
 }
