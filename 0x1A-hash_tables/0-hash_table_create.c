@@ -14,8 +14,6 @@ if (table != NULL)
 {
 table->size = size;
 table->array = malloc(sizeof(void *) * size);
-if (table->array == NULL)
-return (NULL);
 }
 else
 return (NULL);
