@@ -21,11 +21,16 @@ new->key = (char *)key;
 new->value = newval;
 new->next = NULL;
 }
+else
+return (0);
 hd = ht->array;
 index = key_index((const unsigned char *)key, ht->size);
 if (hd[index])
+{
 hd[0] = new;
+}
 else
 hd[index] = new;
+free(new);
 return (1);
 }
