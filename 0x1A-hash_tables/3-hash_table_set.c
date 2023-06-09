@@ -12,12 +12,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 unsigned long int index = key_index((const unsigned char *)key, 1024);
 hash_node_t **hd;
+char *newval = (char *)value;
 hash_node_t *new;
 new = malloc(sizeof(hash_node_t));
 if (new)
 {
 new->key = (char *)key;
-new->value = (char *)value;
+new->value = newval;
 new->next = NULL;
 }
 hd = ht->array;
