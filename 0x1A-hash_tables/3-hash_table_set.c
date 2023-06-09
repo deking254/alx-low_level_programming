@@ -40,20 +40,15 @@ else
 {
 new->next = ht->array[index];
 ht->array[index] = new;
-l = index;
+l = index; }
 }
+else
+return (0); }
+else
+return (0); }
+else
+return (0); }
 }
 else
 return (0);
-}
-else
-return (0);
-}
-else
-return (0);
-}
-}
-else
-return (0);
-return (1);
-}
+return (1); }
