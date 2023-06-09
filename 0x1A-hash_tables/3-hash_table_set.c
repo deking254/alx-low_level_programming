@@ -27,10 +27,10 @@ hd = ht->array;
 index = key_index((const unsigned char *)key, ht->size);
 if (hd[index])
 {
+new->next = hd[0];
 hd[0] = new;
 }
 else
 hd[index] = new;
-free(new);
 return (1);
 }
