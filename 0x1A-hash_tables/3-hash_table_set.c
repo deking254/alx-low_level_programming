@@ -30,6 +30,8 @@ hd = ht->array;
 index = key_index((const unsigned char *)key, ht->size);
 if (hd[index])
 {
+if (strcmp(key, hd[index]->key) == 0)
+hd[index] = new;
 new->next = hd[0];
 hd[0] = new;
 }
