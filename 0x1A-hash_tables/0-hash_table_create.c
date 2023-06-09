@@ -13,7 +13,7 @@ table = malloc(sizeof(hash_table_t));
 if (table != NULL)
 {
 table->size = size;
-table->array = malloc(sizeof(void *) * size);
+table->array = calloc(size, sizeof(void *));
 }
 else
 return (NULL);
