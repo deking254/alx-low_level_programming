@@ -12,7 +12,7 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 unsigned long int index;
-static unsigned long int l = 0;
+static unsigned long int l;
 hash_node_t *new;
 if (ht)
 {
@@ -35,6 +35,7 @@ else
 {
 new->next = ht->array[index];
 ht->array[index] = new;
+l = index;
 }
 }
 else
