@@ -25,10 +25,11 @@ int main(void)
     key = strdup("Tim");
     value = strdup("Britton");
     hash_table_set(ht, key, value);
+    /*printf("%c\n", key[0]);
     key[0] = '\0';
     value[0] = '\0';
     free(key);
-    free(value);
+    free(value);*/
     hash_table_set(ht, "98", "Battery Street"); 
     hash_table_set(ht, "hetairas", "Bob");
     hash_table_set(ht, "hetairas", "Bob Z");
