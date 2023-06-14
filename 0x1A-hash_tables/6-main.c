@@ -11,8 +11,8 @@
 int main(void)
 {
     hash_table_t *ht;
-    char *key;
-    char *value;
+    /*char *key;
+    char *value;*/
 
     ht = hash_table_create(1024);
     hash_table_set(ht, "c", "fun");
@@ -22,10 +22,10 @@ int main(void)
     hash_table_set(ht, "Asterix", "Obelix");
     hash_table_set(ht, "Betty", "Cool");
     hash_table_set(ht, "98", "Battery Streetz");
-    key = strdup("Tim");
+    /*key = strdup("Tim");
     value = strdup("Britton");
     hash_table_set(ht, key, value);
-    /*printf("%c\n", key[0]);
+    printf("%c\n", key[0]);
     key[0] = '\0';
     value[0] = '\0';
     free(key);
