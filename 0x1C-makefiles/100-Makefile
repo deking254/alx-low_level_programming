@@ -7,8 +7,10 @@ $(NAME): $(OBJ)
         $(CC) $^ -o $@
 all: $(NAME)
 clean:
+	@rm -f $(OBJ)
 	$(RM) -f $(OBJ)
 oclean:
+	@rm -f $(OBJ)
 	$(RM) -f $(OBJ)
 fclean: clean oclean
 re: all
