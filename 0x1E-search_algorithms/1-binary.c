@@ -1,6 +1,7 @@
 #include "search_algos.h"
 #include <string.h>
 void print_array(int *array, size_t end, size_t current_index);
+void printDigits(int num);
 /**
  * binary_search - Entry point
  * @array: arr
@@ -41,7 +42,6 @@ return (-1);
  */
 void print_array(int *array, size_t end, size_t current_index)
 {
-int digit;
 size_t i = 0;
 int s;
 fputs("Searching in array: ", stdout);
@@ -54,21 +54,17 @@ if (array[current_index + i] < 0)
 {
 putchar('-');
 s = s * -1;
-while (s > 0)
-{
-digit = s % 10;
-putchar('0' + digit);
-s /= 10;
-}
+if (s >= 10)
+printDigits(s);
+else
+putchar('0' + s);
 }
 if (array[current_index + i] > 0)
 {
-while (s > 0)
-{
-digit = s % 10;
-putchar('0' + digit);
-s /= 10;
-}
+if (s >= 10)
+printDigits(s);
+else
+putchar('0' + s);
 }
 if (array[current_index + i] == 0)
 putchar('0');
@@ -78,21 +74,17 @@ else
 if (array[current_index + i] < 0)
 {
 s = s * -1;
-while (s > 0)
-{
-digit = s % 10;
-putchar('0' + digit);
-s /= 10;
-}
+if (s >= 10)
+printDigits(s);
+else
+putchar('0' + s);
 }
 if (array[current_index + i] > 0)
 {
-while (s > 0)
-{
-digit = s % 10;
-putchar('0' + digit);
-s /= 10;
-}
+if (s >= 10)
+printDigits(s);
+else
+putchar('0' + s);
 }
 if (array[current_index + i] == 0)
 putchar('0');
@@ -102,4 +94,22 @@ putchar(' ');
 i++;
 }
 putchar('\n');
+}
+
+/**
+ * printDigits - Entry point
+ * @num:size of arr
+ * Return: Always EXIT_SUCCESS
+ */
+void printDigits(int num)
+{
+if (num < 10)
+{
+putchar('0' + num);
+}
+else
+{
+printDigits(num / 10);
+putchar('0' + (num % 10));
+}
 }
