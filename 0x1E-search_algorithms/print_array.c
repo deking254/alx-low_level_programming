@@ -1,5 +1,4 @@
 #include "search_algos.h"
-#include <stdlib.h>
 /**
  * print_array - Entry point
  * @end: arr
@@ -9,6 +8,7 @@
 void print_array(int *array, size_t end, size_t current_index)
 {
 size_t i = 0;
+char ind[20];
 fputs("Searching in array: ", stdout);
 while (end >= (current_index + i))
 {
@@ -20,7 +20,10 @@ putchar('-');
 putchar('0' + (array[current_index + i] * -1));
 }
 if (array[current_index + i] > 0)
-putchar('0' + (array[current_index + i]));
+{
+snprintf(ind, 20, "%d", array[current_index + i]);
+fputs(ind, stdout);
+}
 if (array[current_index + i] == 0)
 putchar('0');
 }
@@ -29,7 +32,8 @@ else
 if (array[current_index + i] < 0)
 {
 putchar('-');
-putchar('0' + (array[current_index + i] * -1));
+snprintf(ind, 20, "%d", array[current_index + i] * -1);
+fputs(ind, stdout);
 }
 if (array[current_index + i] > 0)
 putchar('0' + (array[current_index + i]));
