@@ -1,6 +1,6 @@
 #include "search_algos.h"
 #include <stdlib.h>
-void print_linear(int value);
+void print_linear(int value, int index);
 /**
  * linear_search  - Entry point
  * @array: arr
@@ -15,7 +15,7 @@ size_t i;
 int status;
 for (i = 0; i < size; i++)
 {
-print_linear(array[i]);
+print_linear(array[i], i);
 if (array[i] == value)
 {
 status = 1;
@@ -39,10 +39,15 @@ return (-1);
  * @value: value searched
  * Return: Always EXIT_SUCCESS
  */
-void print_linear(int value)
+void print_linear(int value, int index)
 {
 char str[20];
-fputs("Value checked array = [", stdout);
+char ind[20];
+fputs("Value checked array[", stdout);
+snprintf(ind, 20, "%d", index);
+fputs(ind, stdout);
+putchar(']');
+fputs(" = [", stdout);
 if (value < 0)
 {
 putchar('-');
