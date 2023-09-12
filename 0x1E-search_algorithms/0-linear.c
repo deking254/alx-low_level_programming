@@ -37,6 +37,7 @@ return (-1);
 /**
  * print_linear  - Entry point
  * @value: value searched
+ * @index: i
  * Return: Always EXIT_SUCCESS
  */
 void print_linear(int value, int index)
