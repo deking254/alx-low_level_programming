@@ -1,6 +1,5 @@
 #include "search_algos.h"
 #include <stdlib.h>
-void print_linear(int value, int index);
 /**
  * linear_search  - Entry point
  * @array: arr
