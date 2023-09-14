@@ -12,6 +12,8 @@ void print_linear(int value, int index);
 
 int jump_search(int *array, size_t size, int value)
 {
+if (array)
+{
 size_t step = sqrt(size);
 size_t prev = 0;
 size_t i;
@@ -37,6 +39,7 @@ return (i);
 else
 {
 print_linear(array[i], i);
+}
 }
 }
 return (-1);
